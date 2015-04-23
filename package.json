@@ -1,0 +1,14 @@
+{
+  "name": "Skeleton",
+  "version": "0.1.0",
+  "author": "Charlie Greenman",
+  "private": true,
+  "devDependencies": {
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "gulp-jade": "*",
+    "browser-sync": "*",
+    "gulp-livereload": "*"
+  }
+}
