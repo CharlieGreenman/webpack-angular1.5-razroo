@@ -2,16 +2,20 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     jade = require('gulp-jade'),
-    browserSync = require('browser-sync').create(),
-    livereload = require('gulp-livereload');
+    webserver = require('gulp-webserver');
+    browserSync = require('browser-sync').create();
 
-//build for browsersync
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
+// Starts a test server, which you can view at http://localhost:8080
+gulp.task('server', function() {
+  gulp.src('./')
+    .pipe(webserver({
+      port: 8080,
+      host: 'localhost',
+      fallback: 'index.html',
+      livereload: true,
+      open: true
+    }))
+  ;
 });
 
 // Uglifies
@@ -48,7 +52,7 @@ gulp.task('watch', function(){
 
 
 
-gulp.task('default', ['scripts', 'sass', 'templates', 'watch']);
+gulp.task('default', ['scripts', 'sass', 'templates', 'watch', 'server']);
 
 
 

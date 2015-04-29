@@ -8,7 +8,6 @@
     "gulp-uglify": "*",
     "gulp-watch": "*",
     "gulp-jade": "*",
-    "browser-sync": "*",
-    "gulp-livereload": "*"
+    "gulp-webserver": "*"
   }
 }
