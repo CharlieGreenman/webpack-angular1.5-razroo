@@ -1,61 +1,43 @@
-var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
-    sass = require('gulp-sass'),
-    jade = require('gulp-jade'),
-    webserver = require('gulp-webserver');
-    browserSync = require('browser-sync').create();
+var gulp        = require('gulp');
+var browserSync = require('browser-sync');
+var sass        = require('gulp-sass');
+var jade        = require('gulp-jade');
+var reload      = browserSync.reload;
 
-// Starts a test server, which you can view at http://localhost:8080
-gulp.task('server', function() {
-  gulp.src('./')
-    .pipe(webserver({
-      port: 8080,
-      host: 'localhost',
-      fallback: 'index.html',
-      livereload: true,
-      open: true
-    }))
-  ;
+//compile jade to html
+gulp.task('templates', function() {
+
+    var YOUR_LOCALS = {};
+
+    return gulp.src('./app/*.jade')
+        .pipe(jade({
+            locals: YOUR_LOCALS
+        }))
+        .pipe(gulp.dest('./dist/'))
 });
 
-// Uglifies
+/**
+ * Important!!
+ * Separate task for the reaction to `.jade` files
+ */
+gulp.task('jade-watch', ['templates'], reload);
 
-gulp.task('scripts', function(){
-  gulp.src('js/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('minjs'))
-});
+
+//Sass task for live injecting into all browsers
 
 gulp.task('sass', function () {
-    gulp.src('./sass/*.scss')
+    return gulp.src('./app/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./css'))
-        .pipe(livereload())
+        .pipe(gulp.dest('./dist/css'))
+        .pipe(reload({stream: true}));
 });
 
-gulp.task('templates', function() {
-  var YOUR_LOCALS = {};
+//Serve and watch the scss/jade files for changes
 
-  gulp.src('./jade/*.jade')
-    .pipe(jade({
-      locals: YOUR_LOCALS,
-      pretty: true
-    }))
-    .pipe(gulp.dest('./'))
-    .pipe(livereload({ start: true }))
+gulp.task('default', ['sass', 'templates'], function () {
+
+    browserSync({server: './dist'});
+
+    gulp.watch('./app/scss/*.scss', ['sass']);
+    gulp.watch('./app/*.jade',      ['jade-watch']);
 });
-
-//create watch task
-gulp.task('watch', function(){
-  gulp.watch(['js/*.js', 'sass/*.scss', 'jade/*.jade'], ['scripts', 'sass', 'templates']);
-});
-
-
-
-gulp.task('default', ['scripts', 'sass', 'templates', 'watch', 'server']);
-
-
-
-
-
-
