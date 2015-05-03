@@ -9,11 +9,11 @@ gulp.task('templates', function() {
 
     var YOUR_LOCALS = {};
 
-    return gulp.src('./app/*.jade')
+    return gulp.src('./app/jade/*.jade')
         .pipe(jade({
             locals: YOUR_LOCALS
         }))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./dist/'))
 });
 
 /**
