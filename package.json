@@ -1,5 +1,5 @@
 {
-  "name": "Skeleton",
+  "name": "gulp",
   "version": "0.1.0",
   "author": "Charlie Greenman",
   "private": true,
@@ -8,6 +8,7 @@
     "gulp-uglify": "*",
     "gulp-watch": "*",
     "gulp-jade": "*",
+    "gulp-jshint": "*",
     "gulp-webserver": "*"
   }
 }

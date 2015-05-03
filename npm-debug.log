@@ -3,19 +3,23 @@
 2 info using npm@1.4.28
 3 info using node@v0.10.35
 4 error install Couldn't read dependencies
-5 error Failed to parse json
-5 error Unexpected token ;
-6 error File: /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass/package.json
-7 error Failed to parse package.json data.
-7 error package.json must be actual JSON, not just JavaScript.
-7 error
-7 error This is not a bug in npm.
-7 error Tell the package author to fix their package.json file. JSON.parse
-8 error System Darwin 14.1.0
-9 error command "node" "/usr/local/bin/npm" "install"
-10 error cwd /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-11 error node -v v0.10.35
-12 error npm -v 1.4.28
-13 error file /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass/package.json
-14 error code EJSONPARSE
-15 verbose exit [ 1, true ]
+5 error Error: Invalid name: "Gulp with Foundation and Sass"
+5 error     at ensureValidName (/usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/fixer.js:315:15)
+5 error     at Object.module.exports.fixNameField (/usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/fixer.js:204:5)
+5 error     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/normalize.js:30:38
+5 error     at Array.forEach (native)
+5 error     at normalize (/usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/normalize.js:29:15)
+5 error     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:342:33)
+5 error     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:126:33)
+5 error     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:266:40
+5 error     at evalmachine.<anonymous>:272:14
+5 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+6 error If you need help, you may report this *entire* log,
+6 error including the npm and node versions, at:
+6 error     <http://github.com/npm/npm/issues>
+7 error System Darwin 14.3.0
+8 error command "node" "/usr/local/bin/npm" "install"
+9 error cwd /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
+10 error node -v v0.10.35
+11 error npm -v 1.4.28
+12 verbose exit [ 1, true ]

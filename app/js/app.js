@@ -1,3 +1,5 @@
-var myName = CharlieGreenman;
+document.addEventListener('DOMContentLoaded',domloaded,false);
+function domloaded(){
 
-var yoman = 'yoman';
+
+}
