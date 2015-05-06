@@ -1,0 +1,1 @@
+function domloaded(){for(var e=document.getElementById("canvas"),d=e.getContext("2d"),t=0,o=2,n=50,a=0;n>a;a++)for(var l=0;n>l;l++)l%n===0&&t++,d.fillStyle="hsl("+360*Math.random()+", 50%, 50%)",d.fillRect(l*o,t*o,20,20)}document.addEventListener("DOMContentLoaded",domloaded,!1),setInterval(domloaded,150);
