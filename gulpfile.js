@@ -4,7 +4,9 @@ var sass        = require('gulp-sass');
 var uglify      = require('gulp-uglify');
 var jade        = require('gulp-jade');
 var jshint      = require('gulp-jshint');
+var fileinclude = require('gulp-file-include');
 var reload      = browserSync.reload;
+
 
 //compile jade to html
 gulp.task('templates', function() {
@@ -47,7 +49,7 @@ gulp.task('default', ['sass', 'templates', 'compress'], function () {
 
     browserSync({server: './dist'});
 
-    gulp.watch('./app/jade/*.jade', ['jade-watch']);
+    gulp.watch('./app/**/*.jade', ['jade-watch']);
     gulp.watch('./app/scss/*.scss', ['sass']);
     gulp.watch('./app/js/*.js', ['js-watch']);
 
