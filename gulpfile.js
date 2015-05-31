@@ -50,7 +50,7 @@ gulp.task('default', ['sass', 'templates', 'compress'], function () {
     browserSync({server: './dist'});
 
     gulp.watch('./app/**/*.jade', ['jade-watch']);
-    gulp.watch('./app/scss/*.scss', ['sass']);
+    gulp.watch('./app/**/*.scss', ['sass']);
     gulp.watch('./app/js/*.js', ['js-watch']);
 
 });

@@ -1,3 +1,19 @@
+/*
+###########################
+###Heavy Usage of SMACCS###
+###########################
+*/
+
+
+@import 'imports/utils';
+@import 'imports/vars';
+
+@import 'imports/base';
+@import 'imports/layout';
+@import 'imports/modules';
+@import 'imports/state';
+
+
 body {
   background-color: yellow;
   width: 100%;
