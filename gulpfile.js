@@ -5,6 +5,8 @@ var uglify      = require('gulp-uglify');
 var jade        = require('gulp-jade');
 var jshint      = require('gulp-jshint');
 var fileinclude = require('gulp-file-include');
+var mainBowerFiles = require('main-bower-files');
+var inject = require('gulp-inject');
 var reload      = browserSync.reload;
 
 
@@ -15,10 +17,19 @@ gulp.task('templates', function() {
 
     gulp.src('./app/jade/*.jade')
         .pipe(jade({
-            locals: YOUR_LOCALS
+            locals: YOUR_LOCALS,
+            pretty: true
         }))
         .pipe(gulp.dest('./dist/'))
 });
+
+gulp.src('./src/index.html')
+  .pipe(inject(gulp.src(bowerFiles(), {read: false}), {name: 'bower'}))
+  .pipe(inject(es.merge(
+    cssFiles,
+    gulp.src('./src/app/**/*.js', {read: false})
+  )))
+  .pipe(gulp.dest('./dist'));
 
 //reload files, once jade compilation happens
 
@@ -29,15 +40,20 @@ gulp.task('jade-watch', ['templates'], reload);
 
 gulp.task('sass', function () {
     gulp.src('./app/scss/*.scss')
-        .pipe(sass())
+        .pipe(sass({
+          includePaths: ['bower_components/foundation/scss']
+        }))
         .pipe(gulp.dest('./dist/css'))
+
         .pipe(reload({stream: true}));
 });
 
 //Separate task for the reaction to js files make change even without compilation and what not
 gulp.task('compress', function() {
   return gulp.src('./app/js/*.js')
-    .pipe(uglify())
+    .pipe(uglify({
+      beautify: true
+    }))
     .pipe(gulp.dest('./dist/js'));
 });
 
@@ -45,7 +61,7 @@ gulp.task('js-watch', ['compress'], reload);
 
 //Serve and watch the scss/jade files for changes
 
-gulp.task('default', ['sass', 'templates', 'compress'], function () {
+gulp.task('default', ['sass', 'templates' ], function () {
 
     browserSync({server: './dist'});
 
