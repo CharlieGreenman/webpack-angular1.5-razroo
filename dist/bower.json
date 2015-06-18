@@ -1,0 +1,21 @@
+{
+  "name": "dist",
+  "version": "0.0.0",
+  "homepage": "https://github.com/CharlieGreenman/Gulp-with-foundation-and-sass",
+  "authors": [
+    "CharlieGreenman"
+  ],
+  "description": "gulp_with_foundation_and_sass",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "jquery": "~2.1.4"
+  }
+}
