@@ -12,8 +12,6 @@
     "gulp-webserver": "*",
     "gulp-file-include": "*",
     "gulp-eslint": "*",
-    "main-bower-files": "*",
-    "gulp-inject": "*",
-    "event-stream": "*"
+    "wiredep": "*"
   }
 }

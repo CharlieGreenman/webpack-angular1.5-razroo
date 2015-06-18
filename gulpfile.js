@@ -4,13 +4,11 @@ var sass        = require('gulp-sass');
 var uglify      = require('gulp-uglify');
 var jade        = require('gulp-jade');
 var jshint      = require('gulp-jshint');
-var fileinclude = require('gulp-file-include');
-var mainBowerFiles = require('main-bower-files');
-var inject = require('gulp-inject');
+var wiredep = require('wiredep').stream;
 var reload      = browserSync.reload;
 
 
-//compile jade to html
+//compile jade to html and use browser reload, once compiled
 gulp.task('templates', function() {
 
     var YOUR_LOCALS = {};
@@ -20,18 +18,13 @@ gulp.task('templates', function() {
             locals: YOUR_LOCALS,
             pretty: true
         }))
-        .pipe(gulp.dest('./dist/'))
+        .pipe(wiredep({
+        directory: './dist/bower_components',
+        bowerJson: require('./dist/bower.json'),
+        ignorePath: '/dist'
+         }))
+        .pipe(gulp.dest('./dist'))
 });
-
-gulp.src('./src/index.html')
-  .pipe(inject(gulp.src(bowerFiles(), {read: false}), {name: 'bower'}))
-  .pipe(inject(es.merge(
-    cssFiles,
-    gulp.src('./src/app/**/*.js', {read: false})
-  )))
-  .pipe(gulp.dest('./dist'));
-
-//reload files, once jade compilation happens
 
 gulp.task('jade-watch', ['templates'], reload);
 
@@ -41,7 +34,7 @@ gulp.task('jade-watch', ['templates'], reload);
 gulp.task('sass', function () {
     gulp.src('./app/scss/*.scss')
         .pipe(sass({
-          includePaths: ['bower_components/foundation/scss']
+          includePaths: ['./dist/bower_components/foundation/scss']
         }))
         .pipe(gulp.dest('./dist/css'))
 
@@ -63,7 +56,7 @@ gulp.task('js-watch', ['compress'], reload);
 
 gulp.task('default', ['sass', 'templates' ], function () {
 
-    browserSync({server: './dist'});
+    browserSync({server: 'dist'});
 
     gulp.watch('./app/**/*.jade', ['jade-watch']);
     gulp.watch('./app/**/*.scss', ['sass']);
