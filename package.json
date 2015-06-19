@@ -12,6 +12,7 @@
     "gulp-webserver": "*",
     "gulp-file-include": "*",
     "gulp-eslint": "*",
-    "wiredep": "*"
+    "wiredep": "*",
+    "gulp-eslint": "*"
   }
 }

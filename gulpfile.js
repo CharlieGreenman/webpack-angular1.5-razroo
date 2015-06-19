@@ -3,12 +3,12 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var uglify      = require('gulp-uglify');
 var jade        = require('gulp-jade');
-var jshint      = require('gulp-jshint');
-var wiredep = require('wiredep').stream;
+var wiredep     = require('wiredep').stream;
+var eslint      = require('gulp-eslint');
 var reload      = browserSync.reload;
 
 
-//compile jade to html and use browser reload, once compiled
+//compile jade to html, use wiredep, and browser reload once compiled
 gulp.task('templates', function() {
 
     var YOUR_LOCALS = {};
@@ -29,7 +29,7 @@ gulp.task('templates', function() {
 gulp.task('jade-watch', ['templates'], reload);
 
 
-//Sass task for live injecting into all browsers
+//Sass task and browser reload
 
 gulp.task('sass', function () {
     gulp.src('./app/scss/*.scss')
@@ -41,7 +41,7 @@ gulp.task('sass', function () {
         .pipe(reload({stream: true}));
 });
 
-//Separate task for the reaction to js files make change even without compilation and what not
+//compress task that has reload attached to it
 gulp.task('compress', function() {
   return gulp.src('./app/js/*.js')
     .pipe(uglify({
@@ -52,9 +52,20 @@ gulp.task('compress', function() {
 
 gulp.task('js-watch', ['compress'], reload);
 
-//Serve and watch the scss/jade files for changes
+//eslint task
+gulp.task('lint', function () {
+    return gulp.src(['./app/js/*.js'])
+        .pipe(eslint({
+        envs: {
+                browser: true
+            }
+      }))
+        .pipe(eslint.format())
+        .pipe(eslint.failOnError());
+});
 
-gulp.task('default', ['sass', 'templates' ], function () {
+
+gulp.task('default', ['sass', 'templates', 'lint' ], function () {
 
     browserSync({server: 'dist'});
 

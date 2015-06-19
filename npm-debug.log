@@ -2,111 +2,20 @@
 1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.35
-4 verbose readDependencies using package.json deps
-5 verbose install where, deps [ '/Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass',
-5 verbose install   [ 'gulp-sass',
-5 verbose install     'gulp-uglify',
-5 verbose install     'gulp-watch',
-5 verbose install     'gulp-jade',
-5 verbose install     'gulp-jshint',
-5 verbose install     'gulp-webserver',
-5 verbose install     'gulp-file-include',
-5 verbose install     'gulp-eslint',
-5 verbose install     'gulp-wiredep' ] ]
-6 info preinstall gulp@0.1.0
-7 warn package.json gulp-watch@4.2.4 No README data
-8 verbose readDependencies using package.json deps
-9 verbose already installed skipping gulp-sass@* /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-10 verbose already installed skipping gulp-uglify@* /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-11 verbose already installed skipping gulp-watch@* /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-12 verbose already installed skipping gulp-jade@* /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-13 verbose already installed skipping gulp-jshint@* /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-14 verbose already installed skipping gulp-webserver@* /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-15 verbose already installed skipping gulp-file-include@* /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-16 verbose already installed skipping gulp-eslint@* /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-17 verbose cache add [ 'gulp-wiredep@*', null ]
-18 verbose cache add name=undefined spec="gulp-wiredep@*" args=["gulp-wiredep@*",null]
-19 verbose parsed url { protocol: null,
-19 verbose parsed url   slashes: null,
-19 verbose parsed url   auth: null,
-19 verbose parsed url   host: null,
-19 verbose parsed url   port: null,
-19 verbose parsed url   hostname: null,
-19 verbose parsed url   hash: null,
-19 verbose parsed url   search: null,
-19 verbose parsed url   query: null,
-19 verbose parsed url   pathname: 'gulp-wiredep@*',
-19 verbose parsed url   path: 'gulp-wiredep@*',
-19 verbose parsed url   href: 'gulp-wiredep@*' }
-20 verbose cache add name="gulp-wiredep" spec="*" args=["gulp-wiredep","*"]
-21 verbose parsed url { protocol: null,
-21 verbose parsed url   slashes: null,
-21 verbose parsed url   auth: null,
-21 verbose parsed url   host: null,
-21 verbose parsed url   port: null,
-21 verbose parsed url   hostname: null,
-21 verbose parsed url   hash: null,
-21 verbose parsed url   search: null,
-21 verbose parsed url   query: null,
-21 verbose parsed url   pathname: '*',
-21 verbose parsed url   path: '*',
-21 verbose parsed url   href: '*' }
-22 verbose addNamed [ 'gulp-wiredep', '*' ]
-23 verbose addNamed [ null, '*' ]
-24 silly lockFile 4989fc99-gulp-wiredep gulp-wiredep@*
-25 verbose lock gulp-wiredep@* /Users/charlie/.npm/4989fc99-gulp-wiredep.lock
-26 silly addNameRange { name: 'gulp-wiredep', range: '*', hasData: false }
-27 verbose request where is /gulp-wiredep
-28 verbose request registry https://registry.npmjs.org/
-29 verbose request id 917db650a2977d2b
-30 verbose url raw /gulp-wiredep
-31 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-wiredep' ]
-32 verbose url resolved https://registry.npmjs.org/gulp-wiredep
-33 verbose request where is https://registry.npmjs.org/gulp-wiredep
-34 info trying registry request attempt 1 at 20:59:54
-35 http GET https://registry.npmjs.org/gulp-wiredep
-36 http 404 https://registry.npmjs.org/gulp-wiredep
-37 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-37 verbose headers   'content-type': 'application/json',
-37 verbose headers   'cache-control': 'max-age=0',
-37 verbose headers   'content-length': '51',
-37 verbose headers   'accept-ranges': 'bytes',
-37 verbose headers   date: 'Fri, 12 Jun 2015 00:59:54 GMT',
-37 verbose headers   via: '1.1 varnish',
-37 verbose headers   age: '0',
-37 verbose headers   connection: 'keep-alive',
-37 verbose headers   'x-served-by': 'cache-iad2145-IAD',
-37 verbose headers   'x-cache': 'MISS',
-37 verbose headers   'x-cache-hits': '0',
-37 verbose headers   'x-timer': 'S1434070794.814860,VS0,VE17' }
-38 silly registry.get cb [ 404,
-38 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-38 silly registry.get     'content-type': 'application/json',
-38 silly registry.get     'cache-control': 'max-age=0',
-38 silly registry.get     'content-length': '51',
-38 silly registry.get     'accept-ranges': 'bytes',
-38 silly registry.get     date: 'Fri, 12 Jun 2015 00:59:54 GMT',
-38 silly registry.get     via: '1.1 varnish',
-38 silly registry.get     age: '0',
-38 silly registry.get     connection: 'keep-alive',
-38 silly registry.get     'x-served-by': 'cache-iad2145-IAD',
-38 silly registry.get     'x-cache': 'MISS',
-38 silly registry.get     'x-cache-hits': '0',
-38 silly registry.get     'x-timer': 'S1434070794.814860,VS0,VE17' } ]
-39 silly lockFile 4989fc99-gulp-wiredep gulp-wiredep@*
-40 silly lockFile 4989fc99-gulp-wiredep gulp-wiredep@*
-41 error 404 404 Not Found: gulp-wiredep
-41 error 404
-41 error 404 'gulp-wiredep' is not in the npm registry.
-41 error 404 You should bug the author to publish it
-41 error 404 It was specified as a dependency of 'gulp'
-41 error 404
-41 error 404 Note that you can also install from a
-41 error 404 tarball, folder, or http url, or git url.
-42 error System Darwin 14.3.0
-43 error command "node" "/usr/local/bin/npm" "install"
-44 error cwd /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
-45 error node -v v0.10.35
-46 error npm -v 1.4.28
-47 error code E404
-48 verbose exit [ 1, true ]
+4 error install Couldn't read dependencies
+5 error Failed to parse json
+5 error Unexpected token }
+6 error File: /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass/package.json
+7 error Failed to parse package.json data.
+7 error package.json must be actual JSON, not just JavaScript.
+7 error
+7 error This is not a bug in npm.
+7 error Tell the package author to fix their package.json file. JSON.parse
+8 error System Darwin 14.3.0
+9 error command "node" "/usr/local/bin/npm" "install"
+10 error cwd /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass
+11 error node -v v0.10.35
+12 error npm -v 1.4.28
+13 error file /Users/charlie/Dropbox/Projects/Gulp-with-foundation-and-sass/package.json
+14 error code EJSONPARSE
+15 verbose exit [ 1, true ]

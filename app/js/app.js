@@ -1,6 +1,7 @@
-document.addEventListener('DOMContentLoaded',domloaded,false);
+"use strict";
+
 function domloaded(){
-    var c = document.getElementById('canvas');
+    var c = document.getElementById("canvas");
     var ctx = c.getContext('2d');
     var j = 0, pixSize = 2, pixCount = 50;
     for(var r = 0; r < pixCount; r++) {
@@ -13,6 +14,7 @@ function domloaded(){
         }
     }
 }
+document.addEventListener("DOMContentLoaded", domloaded, false);
 setInterval(domloaded,150);
 
 
