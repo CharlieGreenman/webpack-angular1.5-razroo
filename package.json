@@ -4,15 +4,15 @@
   "author": "Charlie Greenman",
   "private": true,
   "devDependencies": {
+    "gulp-babel": "^5.1.0",
+    "gulp-eslint": "*",
+    "gulp-file-include": "*",
+    "gulp-jade": "*",
+    "gulp-jshint": "*",
     "gulp-sass": "*",
     "gulp-uglify": "*",
     "gulp-watch": "*",
-    "gulp-jade": "*",
-    "gulp-jshint": "*",
     "gulp-webserver": "*",
-    "gulp-file-include": "*",
-    "gulp-eslint": "*",
-    "wiredep": "*",
-    "gulp-eslint": "*"
+    "wiredep": "*"
   }
 }

@@ -5,6 +5,7 @@ var uglify      = require('gulp-uglify');
 var jade        = require('gulp-jade');
 var wiredep     = require('wiredep').stream;
 var eslint      = require('gulp-eslint');
+var babel       = require('gulp-babel');
 var reload      = browserSync.reload;
 
 
@@ -56,12 +57,13 @@ gulp.task('js-watch', ['compress'], reload);
 gulp.task('lint', function () {
     return gulp.src(['./app/js/*.js'])
         .pipe(eslint({
-        envs: {
+          envs: {
                 browser: true
             }
-      }))
+          }))
         .pipe(eslint.format())
-        .pipe(eslint.failOnError());
+        .pipe(eslint.failOnError())
+        .pipe(babel())
 });
 
 
