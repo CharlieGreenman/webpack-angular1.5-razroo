@@ -1,4 +1,3 @@
-# Gulp-with-foundation-and-sass
-A barebones framework implementing gulp-jada-sass(using Smacss) for rapid prototyping
-TODO include foundation
-TODO implement for yeoman build
+# Gulp-with-bower-sass-foundation-jade-wiredep-and-more
+As of now this is a prototyping tool. 
+TODO turn into Yeoman framework catering to a very specific build system 
