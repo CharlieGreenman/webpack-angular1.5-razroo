@@ -7,6 +7,7 @@ var wiredep     = require('wiredep').stream;
 var eslint      = require('gulp-eslint');
 var babel       = require('gulp-babel');
 var plumber = require('gulp-plumber');
+var autoprefixer = require('gulp-autoprefixer');
 var reload      = browserSync.reload;
 
 
@@ -37,6 +38,7 @@ gulp.task('jade-watch', ['templates'], reload);
 gulp.task('sass', function () {
     gulp.src('./app/scss/*.scss')
         .pipe(plumber())
+        .pipe(autoprefixer())
         .pipe(sass({
           includePaths: ['./dist/bower_components/foundation/scss']
         }))

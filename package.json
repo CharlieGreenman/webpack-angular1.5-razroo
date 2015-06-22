@@ -4,11 +4,13 @@
   "author": "Charlie Greenman",
   "private": true,
   "devDependencies": {
+    "gulp-autoprefixer": "^2.3.1",
     "gulp-babel": "^5.1.0",
     "gulp-eslint": "*",
     "gulp-file-include": "*",
     "gulp-jade": "*",
     "gulp-jshint": "*",
+    "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "*",
     "gulp-uglify": "*",
