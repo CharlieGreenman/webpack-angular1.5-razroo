@@ -6,6 +6,7 @@ var jade        = require('gulp-jade');
 var wiredep     = require('wiredep').stream;
 var eslint      = require('gulp-eslint');
 var babel       = require('gulp-babel');
+var plumber = require('gulp-plumber');
 var reload      = browserSync.reload;
 
 
@@ -15,6 +16,7 @@ gulp.task('templates', function() {
     var YOUR_LOCALS = {};
 
     gulp.src('./app/jade/*.jade')
+        .pipe(plumber())
         .pipe(jade({
             locals: YOUR_LOCALS,
             pretty: true
@@ -34,6 +36,7 @@ gulp.task('jade-watch', ['templates'], reload);
 
 gulp.task('sass', function () {
     gulp.src('./app/scss/*.scss')
+        .pipe(plumber())
         .pipe(sass({
           includePaths: ['./dist/bower_components/foundation/scss']
         }))
@@ -56,6 +59,7 @@ gulp.task('js-watch', ['compress'], reload);
 //eslint task
 gulp.task('lint', function () {
     return gulp.src(['./app/js/*.js'])
+        .pipe(plumber())
         .pipe(eslint({
           envs: {
                 browser: true
@@ -63,7 +67,7 @@ gulp.task('lint', function () {
           }))
         .pipe(eslint.format())
         .pipe(eslint.failOnError())
-        .pipe(babel())
+        .pipe(babel());
 });
 
 

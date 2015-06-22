@@ -9,6 +9,7 @@
     "gulp-file-include": "*",
     "gulp-jade": "*",
     "gulp-jshint": "*",
+    "gulp-plumber": "^1.0.1",
     "gulp-sass": "*",
     "gulp-uglify": "*",
     "gulp-watch": "*",
