@@ -4,6 +4,7 @@ function domloaded() {
 
   var c = document.getElementById("canvas");
   var ctx = c.getContext("2d");
+
   var j = 0,
       pixSize = 2,
       pixCount = 50;
