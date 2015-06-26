@@ -56,7 +56,6 @@ gulp.task('compress', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('js-watch', ['compress'], reload);
 
 //eslint task
 gulp.task('lint', function () {
@@ -69,8 +68,12 @@ gulp.task('lint', function () {
           }))
         .pipe(eslint.format())
         .pipe(eslint.failOnError())
-        .pipe(babel());
+        .pipe(babel())
+        .pipe(gulp.dest('./dist/js'));
 });
+
+
+gulp.task('js-watch', ['lint'], reload);
 
 
 gulp.task('default', ['sass', 'templates', 'lint' ], function () {
@@ -79,6 +82,6 @@ gulp.task('default', ['sass', 'templates', 'lint' ], function () {
 
     gulp.watch('./app/**/*.jade', ['jade-watch']);
     gulp.watch('./app/**/*.scss', ['sass']);
-    gulp.watch('./app/js/*.js', ['js-watch']);
+    gulp.watch('./app/js/*.js', ['lint']);
 
 });

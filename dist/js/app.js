@@ -1,1 +1,21 @@
-function domloaded(){for(var e=document.getElementById("canvas"),d=e.getContext("2d"),t=0,o=2,n=50,a=0;n>a;a++)for(var l=0;n>l;l++)l%n===0&&t++,d.fillStyle="hsl("+360*Math.random()+", 50%, 50%)",d.fillRect(l*o,t*o,20,20)}document.addEventListener("DOMContentLoaded",domloaded,!1),setInterval(domloaded,150);
+"use strict";
+
+function domloaded() {
+  "use strict";
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  var j = 0,
+      pixSize = 2,
+      pixCount = 50;
+  for (var r = 0; r < pixCount; r++) {
+    for (var i = 0; i < pixCount; i++) {
+      if (i % pixCount === 0) {
+        j++;
+      }
+      //random color function
+      ctx.fillStyle = "hsl(" + 360 * Math.random() + ", 50%, 50%)";
+      ctx.fillRect(i * pixSize, j * pixSize, 20, 20);
+    }
+  }
+}
+setInterval(domloaded, 150);
