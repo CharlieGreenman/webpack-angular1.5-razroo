@@ -40,4 +40,9 @@ TODO
 * gulp-imagemin
 
 
+###Phase 2###
+TODO
+Separate build for development and production
+
+###Phase 3###
 TODO turn into Yeoman framework catering to a very specific build system 
