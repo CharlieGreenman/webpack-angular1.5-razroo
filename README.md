@@ -11,11 +11,14 @@ The following are included in this build (gulps equivalent obviously)
     * watches all js files in the js folder
 * Jade
   * Include infrastructure for Jade
+  * Plumber Included so that errors do not stop watch
 * Sass
   * SMACSS File Infrastructure (Sass modified)
+  * Plumber Included so that errors do not stop watch
 * Autoprefixer
 * Eslint
     * Babel support included
+
 * Babel
 * Uglify
   * turned off by default
@@ -28,13 +31,13 @@ The following are included in this build (gulps equivalent obviously)
 * Wiredep included for automatic bower injection
     * Works with Jade
 
-
-
-
-
-
-
-
-
 As of now this is a prototyping tool.
+###Phase 1###
+TODO
+* gulp-minify-css
+* gulp-concat
+* gulp-iconfont
+* gulp-imagemin
+
+
 TODO turn into Yeoman framework catering to a very specific build system 

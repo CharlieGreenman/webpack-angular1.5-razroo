@@ -10,7 +10,6 @@ var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var reload      = browserSync.reload;
 
-
 //compile jade to html, use wiredep, and browser reload once compiled
 gulp.task('templates', function() {
 
