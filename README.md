@@ -52,4 +52,12 @@ The following features will be moved over to production only
 _*complete*_
 
 ###Phase 3###
+Make build production ready
+* allow for quick clone/downloading
+* allow for sudo npm install to download all appropiate packages
+* allow for bower install to download foundation
+
+###Phase 4###
 TODO turn into Yeoman framework catering to a very specific build system 
+
+The following will become optional in yeoman framework
