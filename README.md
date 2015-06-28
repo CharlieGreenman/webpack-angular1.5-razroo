@@ -33,12 +33,12 @@ The following are included in this build (gulps equivalent obviously)
     * Works with Jade + jade include file structure
 * Imagemin
     * Png + SVG + JPG GIF images minified
-
+* Concat JS files
+  * all js files in repository are concatenated together
 
 As of now this is a prototyping tool.
 ###Phase 1###
 TODO
-* gulp-concat
 * gulp-iconfont
 
 

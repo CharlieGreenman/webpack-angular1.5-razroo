@@ -16,6 +16,7 @@
     "gulp-uglify": "*",
     "gulp-watch": "*",
     "gulp-webserver": "*",
+    "gulp-concat": "*",
     "wiredep": "*"
   },
   "dependencies": {
