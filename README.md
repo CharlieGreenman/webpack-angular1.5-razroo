@@ -37,7 +37,8 @@ The following are included in this build (gulps equivalent obviously)
 
 As of now this is a prototyping tool.
 ###Phase 1###
-*Complete*
+Create base gulp build
+_*Complete*_
 
 ###Phase 2###
 TODO
@@ -47,6 +48,8 @@ The following features will be moved over to production only
 --> sass uglify
 --> imagemin
 --> concat js
+
+_*complete*_
 
 ###Phase 3###
 TODO turn into Yeoman framework catering to a very specific build system 
