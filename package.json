@@ -6,17 +6,16 @@
   "devDependencies": {
     "gulp-autoprefixer": "^2.3.1",
     "gulp-babel": "^5.1.0",
+    "gulp-concat": "*",
     "gulp-eslint": "*",
-    "gulp-file-include": "*",
+    "gulp-iconfont": "^3.0.2",
     "gulp-imagemin": "^2.3.0",
     "gulp-jade": "*",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "*",
-    "gulp-uglify": "*",
     "gulp-watch": "*",
     "gulp-webserver": "*",
-    "gulp-concat": "*",
     "wiredep": "*"
   },
   "dependencies": {

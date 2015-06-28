@@ -1,7 +1,6 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
-var uglify      = require('gulp-uglify');
 var jade        = require('gulp-jade');
 var wiredep     = require('wiredep').stream;
 var eslint      = require('gulp-eslint');

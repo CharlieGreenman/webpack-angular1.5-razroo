@@ -38,10 +38,7 @@ The following are included in this build (gulps equivalent obviously)
 
 As of now this is a prototyping tool.
 ###Phase 1###
-TODO
-* gulp-iconfont
-
-
+*Complete*
 
 ###Phase 2###
 TODO
