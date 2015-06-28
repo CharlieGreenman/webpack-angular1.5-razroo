@@ -16,13 +16,11 @@ The following are included in this build (gulps equivalent obviously)
 * Sass
   * SMACSS File Infrastructure (Sass modified)
   * Plumber Included so that errors do not stop watch
-* Autoprefixer
-* Eslint
-    * Babel support included
 
 * Babel
-* Uglify
-  * turned off by default
+* Eslint
+    * Babel support included
+* Autoprefixer
 * BrowserSync for:
   * Jade
   * Sass
@@ -31,6 +29,7 @@ The following are included in this build (gulps equivalent obviously)
   * In distribution folder for simple file transfer
 * Wiredep included for automatic bower injection
     * Works with Jade + jade include file structure
+    *
 * Imagemin
     * Png + SVG + JPG GIF images minified
 * Concat JS files
@@ -43,6 +42,11 @@ As of now this is a prototyping tool.
 ###Phase 2###
 TODO
 Separate build for development and production
+
+The following features will be moved over to production only
+--> sass uglify
+--> imagemin
+--> concat js
 
 ###Phase 3###
 TODO turn into Yeoman framework catering to a very specific build system 
