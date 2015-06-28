@@ -7,6 +7,7 @@ The following are included in this build (gulps equivalent obviously)
     * Watches root jade and jade includes
   * Sass
     * Watches root Sass and Sass imports
+    * uglifies/minifies sass
   * Javascript
     * watches all js files in the js folder
 * Jade
@@ -29,15 +30,17 @@ The following are included in this build (gulps equivalent obviously)
 * Bower
   * In distribution folder for simple file transfer
 * Wiredep included for automatic bower injection
-    * Works with Jade
+    * Works with Jade + jade include file structure
+* Imagemin
+    * Png + SVG + JPG GIF images minified
+
 
 As of now this is a prototyping tool.
 ###Phase 1###
 TODO
-* gulp-minify-css
 * gulp-concat
 * gulp-iconfont
-* gulp-imagemin
+
 
 
 ###Phase 2###

@@ -8,6 +8,8 @@ var eslint      = require('gulp-eslint');
 var babel       = require('gulp-babel');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 var reload      = browserSync.reload;
 
 //compile jade to html, use wiredep, and browser reload once compiled
@@ -39,7 +41,8 @@ gulp.task('sass', function () {
         .pipe(plumber())
         .pipe(autoprefixer())
         .pipe(sass({
-          includePaths: ['./dist/bower_components/foundation/scss']
+          includePaths: ['./dist/bower_components/foundation/scss'],
+          outputStyle: 'compressed'
         }))
         .pipe(gulp.dest('./dist/css'))
 
@@ -47,12 +50,14 @@ gulp.task('sass', function () {
 });
 
 //compress task that has reload attached to it
-gulp.task('compress', function() {
-  return gulp.src('./app/js/*.js')
-    .pipe(uglify({
-      beautify: true
+gulp.task('imagemin', function() {
+  return gulp.src('./src/images/*')
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngquant()]
     }))
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest('./dist/images'));
 });
 
 
@@ -75,7 +80,7 @@ gulp.task('lint', function () {
 gulp.task('js-watch', ['lint'], reload);
 
 
-gulp.task('default', ['sass', 'templates', 'lint' ], function () {
+gulp.task('default', ['sass', 'templates', 'imagemin', 'lint' ], function () {
 
     browserSync({server: 'dist'});
 
