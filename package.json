@@ -4,6 +4,7 @@
   "author": "Charlie Greenman",
   "private": true,
   "devDependencies": {
+    "browser-sync": "*",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-babel": "^5.1.0",
     "gulp-concat": "*",
