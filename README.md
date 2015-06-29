@@ -57,6 +57,8 @@ Make build production ready
 * allow for sudo npm install to download all appropiate packages
 * allow for bower install to download foundation
 
+_*complete*_
+
 ###Phase 4###
 TODO turn into Yeoman framework catering to a very specific build system 
 
