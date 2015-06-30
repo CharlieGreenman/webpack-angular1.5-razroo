@@ -134,7 +134,7 @@ gulp.task('default', ['sass', 'templates', 'lint' ], function () {
 
     gulp.watch('./app/**/*.jade', ['jade-watch']);
     gulp.watch('./app/**/*.scss', ['sass']);
-    gulp.watch('./app/js/*.js', ['lint']);
+    gulp.watch('./app/js/*.js', ['js-watch']);
 
 });
 

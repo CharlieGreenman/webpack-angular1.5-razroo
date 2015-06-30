@@ -1,5 +1,10 @@
 # A very opinionated Gulp front end infrastructure
 
+##two separate builds##
+There is a default build for development
+There is a production build, that goes into the folder called publish
+To use is, type gulp publish
+
 The following are included in this build (gulps equivalent obviously)
 
 * Watch
