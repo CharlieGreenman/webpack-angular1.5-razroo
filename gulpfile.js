@@ -71,12 +71,13 @@ gulp.task('sass', function () {
 gulp.task('sass-publish', function () {
     gulp.src('./app/scss/*.scss')
         .pipe(plumber())
-        .pipe(autoprefixer())
+
         .pipe(sass({
           includePaths: ['./dist/bower_components/foundation/scss'],
           outputStyle: 'compressed'
         }))
         .pipe(gulp.dest('./publish/css'))
+        .pipe(autoprefixer())
 
         .pipe(reload({stream: true}));
 });
