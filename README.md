@@ -30,6 +30,8 @@ The following are included in this build (gulps equivalent obviously)
   * Jade
   * Sass
   * Javascript
+* JSDoc
+  * Documentation for Javascript
 * Bower
   * In distribution folder for simple file transfer
 * Wiredep included for automatic bower injection
