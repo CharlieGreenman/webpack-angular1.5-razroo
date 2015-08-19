@@ -85,13 +85,13 @@ gulp.task('sass-publish', function () {
 
 //compress task that has reload attached to it
 gulp.task('imagemin', function() {
-  return gulp.src('./src/images/*')
+  return gulp.src('./app/img/*')
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
     }))
-    .pipe(gulp.dest('./publish/images'));
+    .pipe(gulp.dest('./dist/img'));
 });
 
 
@@ -106,7 +106,7 @@ gulp.task('lint', function () {
           }))
         .pipe(eslint.format())
         .pipe(eslint.failOnError())
-        .pipe(jsdoc('./documentation-output'))
+        .pipe(jsdoc('./app/documentation-output'))
         .pipe(babel())
         .pipe(gulp.dest('./dist/js'));
 });
@@ -131,7 +131,7 @@ gulp.task('lint-publish', function () {
 gulp.task('js-watch', ['lint'], reload);
 
 
-gulp.task('default', ['sass', 'templates', 'lint' ], function () {
+gulp.task('default', ['sass', 'templates', 'lint', 'imagemin' ], function () {
 
     browserSync({server: 'dist'});
 
