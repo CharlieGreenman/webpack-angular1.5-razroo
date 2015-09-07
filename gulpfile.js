@@ -18,7 +18,7 @@ gulp.task('templates', function() {
 
     var YOUR_LOCALS = {};
 
-    gulp.src('./app/jade/*.jade')
+   return gulp.src('./app/jade/*.jade')
         .pipe(plumber())
         .pipe(jade({
             locals: YOUR_LOCALS,
@@ -36,7 +36,7 @@ gulp.task('templates-publish', function() {
 
     var YOUR_LOCALS = {};
 
-    gulp.src('./app/jade/*.jade')
+   return  gulp.src('./app/jade/*.jade')
         .pipe(plumber())
         .pipe(jade({
             locals: YOUR_LOCALS,
@@ -57,7 +57,7 @@ gulp.task('jade-watch', ['templates'], reload);
 //Sass task and browser reload
 
 gulp.task('sass', function () {
-    gulp.src('./app/scss/*.scss')
+    return gulp.src('./app/scss/*.scss')
         .pipe(plumber())
         .pipe(autoprefixer())
         .pipe(sass({
@@ -70,7 +70,7 @@ gulp.task('sass', function () {
 
 
 gulp.task('sass-publish', function () {
-    gulp.src('./app/scss/*.scss')
+    return gulp.src('./app/scss/*.scss')
         .pipe(plumber())
 
         .pipe(sass({
