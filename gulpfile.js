@@ -1,17 +1,16 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var sass        = require('gulp-sass');
-var jade        = require('gulp-jade');
-var wiredep     = require('wiredep').stream;
-var eslint      = require('gulp-eslint');
-var babel       = require('gulp-babel');
-var plumber = require('gulp-plumber');
+var gulp         = require('gulp');
+var webpack      = require('webpack-stream');
+var sass         = require('gulp-sass');
+var jade         = require('gulp-jade');
+var wiredep      = require('wiredep').stream;
+var eslint       = require('gulp-eslint');
+var babel        = require('gulp-babel');
+var plumber      = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
-var concat = require('gulp-concat');
-var jsdoc = require("gulp-jsdoc");
-var reload      = browserSync.reload;
+var imagemin     = require('gulp-imagemin');
+var pngquant     = require('imagemin-pngquant');
+var concat       = require('gulp-concat');
+var jsdoc        = require("gulp-jsdoc");
 
 //compile jade to html, use wiredep, and browser reload once compiled
 gulp.task('templates', function() {
@@ -51,9 +50,6 @@ gulp.task('templates-publish', function() {
 });
 
 
-gulp.task('jade-watch', ['templates'], reload);
-
-
 //Sass task and browser reload
 
 gulp.task('sass', function () {
@@ -64,8 +60,6 @@ gulp.task('sass', function () {
           includePaths: ['./dist/bower_components/foundation/scss']
         }))
         .pipe(gulp.dest('./dist/css'))
-
-        .pipe(reload({stream: true}));
 });
 
 
@@ -94,7 +88,6 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('./dist/img'));
 });
 
-
 //eslint task
 gulp.task('lint', function () {
     return gulp.src(['./app/js/*.js'])
@@ -108,6 +101,14 @@ gulp.task('lint', function () {
         .pipe(eslint.failOnError())
         .pipe(jsdoc('./app/documentation-output'))
         .pipe(babel())
+        .pipe(webpack({
+           watch: true,
+           module: {
+             loaders: [
+               { test: /\.css$/, loader: 'style!css' }
+             ]
+           }
+         }))
         .pipe(gulp.dest('./dist/js'));
 });
 
@@ -124,23 +125,12 @@ gulp.task('lint-publish', function () {
         .pipe(eslint.failOnError())
         .pipe(babel())
         .pipe(concat('all.js'))
+        .pipe(webpack({
+           watch: true
+         }))
         .pipe(gulp.dest('./publish/js'));
 });
 
+gulp.task('default', ['sass', 'templates', 'lint', 'imagemin' ]);
 
-gulp.task('js-watch', ['lint'], reload);
-
-
-gulp.task('default', ['sass', 'templates', 'lint', 'imagemin' ], function () {
-
-    browserSync({server: 'dist'});
-
-    gulp.watch('./app/**/*.jade', ['jade-watch']);
-    gulp.watch('./app/**/*.scss', ['sass']);
-    gulp.watch('./app/js/*.js', ['js-watch']);
-
-});
-
-gulp.task('publish', ['sass-publish', 'templates-publish', 'imagemin', 'lint-publish' ], function () {
-
-});
+gulp.task('publish', ['sass-publish', 'templates-publish', 'imagemin', 'lint-publish' ]);
