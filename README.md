@@ -1,4 +1,4 @@
-# A Webpack + Gulp build System goin' Hamm
+# A Webpack + Gulp Build System goin' Hamm
 ![goin' ham with Hamm](http://33.media.tumblr.com/dde15901a30e33fda2db472bd3e5849e/tumblr_inline_mi5adv4Qyh1rompwx.gif)
 
 
@@ -48,7 +48,6 @@ The following are included in this build (gulps equivalent obviously)
 * Concat JS files
   * all js files in repository are concatenated together
 
-As of now this is a prototyping tool.
 ###Phase 1###
 Create base gulp build
 _*Complete*_
@@ -76,7 +75,7 @@ _*complete*_
 TODO allow for webpack use
 _*complete*_
 
-###Phase 4###
+###Phase 5###
 TODO turn into Yeoman framework catering to a very specific build system 
 
 The following will become optional in yeoman framework
