@@ -21,7 +21,9 @@ The following are included in this build (gulps equivalent obviously)
 * Sass
   * SMACSS File Infrastructure (Sass modified)
   * Plumber Included so that errors do not stop watch
-
+* Webpack
+  * For this project included as a gulp stream
+  * used specifically in this project to allow for es6 modules
 * Babel
 * Eslint
     * Babel support included
