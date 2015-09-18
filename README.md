@@ -1,10 +1,11 @@
 # A Webpack + Gulp build System goin' Hamm
 ![goin' ham with Hamm](http://33.media.tumblr.com/dde15901a30e33fda2db472bd3e5849e/tumblr_inline_mi5adv4Qyh1rompwx.gif)
 
+
 ##two separate builds##
-There is a default build for development
-There is a production build, that goes into the folder called publish
-To use is, type gulp publish
+There is a default build for development.
+There is a production build, that goes into the folder called publish.
+To use production, type in your terminal, or cmd gulp publish.
 
 The following are included in this build (gulps equivalent obviously)
 
@@ -38,6 +39,7 @@ The following are included in this build (gulps equivalent obviously)
   * Documentation for Javascript
 * Bower
   * In distribution folder for simple file transfer
+  * js files automatically included using wiredep
 * Wiredep included for automatic bower injection
     * Works with Jade + jade include file structure
     *
@@ -71,7 +73,8 @@ Make build production ready
 _*complete*_
 
 ###Phase 4###
-TODO turn into Yeoman framework catering to a very specific build system
+TODO allow for webpack use
+_*complete*_
 
 ###Phase 4###
 TODO turn into Yeoman framework catering to a very specific build system 
