@@ -1,4 +1,5 @@
-# A very opinionated Gulp front end infrastructure
+# A Webpack + Gulp build System goin' Hamm
+![goin' ham with Hamm](http://33.media.tumblr.com/dde15901a30e33fda2db472bd3e5849e/tumblr_inline_mi5adv4Qyh1rompwx.gif)
 
 ##two separate builds##
 There is a default build for development
@@ -68,6 +69,9 @@ Make build production ready
 * allow for bower install to download foundation
 
 _*complete*_
+
+###Phase 4###
+TODO turn into Yeoman framework catering to a very specific build system
 
 ###Phase 4###
 TODO turn into Yeoman framework catering to a very specific build system 
