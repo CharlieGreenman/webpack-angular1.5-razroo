@@ -9,7 +9,6 @@ var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
-var jsdoc = require("gulp-jsdoc");
 var reload      = browserSync.reload;
 
 //compile jade to html, use wiredep, and browser reload once compiled
@@ -115,7 +114,6 @@ gulp.task('lint', function () {
           }))
         .pipe(eslint.format())
         .pipe(eslint.failOnError())
-        .pipe(jsdoc('./app/documentation-output'))
         .pipe(gulp.dest('./dist/js'));
 });
 
