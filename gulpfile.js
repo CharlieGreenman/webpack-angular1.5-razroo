@@ -9,6 +9,7 @@ var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var spritesmith = require('gulp.spritesmith');
 var reload      = browserSync.reload;
 
 //compile jade to html, use wiredep, and browser reload once compiled
@@ -85,9 +86,13 @@ gulp.task('sass-publish', function () {
 gulp.task('imagemin', function() {
   return gulp.src('./app/img/*')
     .pipe(imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-        use: [pngquant()]
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
+    }))
+    .pipe(spritesmith({
+      imgName: 'sprite.png',
+      cssName: 'sprite.css'
     }))
     .pipe(gulp.dest('./dist/img'));
 });

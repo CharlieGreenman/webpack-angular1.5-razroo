@@ -20,6 +20,7 @@
     "gulp-sass": "*",
     "gulp-watch": "*",
     "gulp-webserver": "*",
+    "gulp.spritesmith": "^4.1.1",
     "webpack": "^1.12.2",
     "webpack-stream": "^2.1.0",
     "wiredep": "*"

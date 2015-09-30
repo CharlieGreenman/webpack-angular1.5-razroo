@@ -45,6 +45,8 @@ The following are included in this build (gulps equivalent obviously)
     *
 * Imagemin
     * Png + SVG + JPG GIF images minified
+* Spritesmith
+    * turn all of your png's into ready to use sprite images
 * Concat JS files
   * all js files in repository are concatenated together
 
