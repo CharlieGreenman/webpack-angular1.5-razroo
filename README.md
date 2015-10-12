@@ -78,6 +78,7 @@ TODO allow for webpack use
 _*complete*_
 
 ###Phase 5###
-TODO turn into Yeoman framework catering to a very specific build system 
+TODO turn into Slush catering to a very specific build system
+  * In particular, keep in mind things which may be very specific, and user may not want. Such as foundation, jade, webpack, react, etc. 
 
 The following will become optional in yeoman framework
