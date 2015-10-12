@@ -74,7 +74,7 @@ Make build production ready
 _*complete*_
 
 ###Phase 4###
-TODO allow for webpack use
+Allow for webpack use
 _*complete*_
 
 ###Phase 5###
