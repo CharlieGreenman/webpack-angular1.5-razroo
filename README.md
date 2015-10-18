@@ -83,6 +83,10 @@ Allow for webpack use
 _*complete*_
 
 ###Phase 5###
+Allow for for use with React, React Dom, and JSX, to be used with webpack
+_*complete*_
+
+###Phase 6###
 TODO turn into Slush catering to a very specific build system
   * In particular, keep in mind things which may be very specific, and user may not want. Such as foundation, jade, webpack, react, etc. 
 
