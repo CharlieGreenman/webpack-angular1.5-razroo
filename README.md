@@ -27,7 +27,12 @@ The following are included in this build (gulps equivalent obviously)
   * For this project included as a gulp stream
   * will automatically concatenate js files
   * uses babel with js and allows for importing and exporting modules as well
-* Babel
+* Babel-loader
+  * allow for es6 to es5 conversion
+*Jsx-loader
+  * allow for Jsx support with React
+* React
+  * along with webpack simply call var React = require("./react");
 * Eslint
     * Babel support included
 * Autoprefixer
