@@ -55,39 +55,13 @@ The following are included in this build (gulps equivalent obviously)
 * Concat JS files
   * all js files in repository are concatenated together
 
-###Phase 1###
-Create base gulp build
-_*Complete*_
-
-###Phase 2###
-TODO
-Separate build for development and production
-
-The following features will be moved over to production only
---> sass uglify
---> imagemin
---> concat js
-
-_*complete*_
-
-###Phase 3###
-Make build production ready
-* allow for quick clone/downloading
-* allow for sudo npm install to download all appropiate packages
-* allow for bower install to download foundation
-
-_*complete*_
-
-###Phase 4###
-Allow for webpack use
-_*complete*_
-
-###Phase 5###
-Allow for for use with React, React Dom, and JSX, to be used with webpack
-_*complete*_
-
-###Phase 6###
-TODO turn into Slush catering to a very specific build system
-  * In particular, keep in mind things which may be very specific, and user may not want. Such as foundation, jade, webpack, react, etc. 
+| Phase  | Task                                                                 | Complete |
+|--------|----------------------------------------------------------------------|----------|
+| 1      | Create base gulp build                                               | Yes      |
+| 2      | Separate build for development and production                        | Yes      |
+| 3      | Make build professional grade                                        | Yes      |
+| 4      | Allow for Webpack use                                                | Yes      |
+| 5      | Allow for use with React, React Dom and JSX, To be use with Webpack. | Yes      |
+| 6      | Turn into a Slush build catering to web  app production              |          |
 
 The following will become optional in yeoman framework
