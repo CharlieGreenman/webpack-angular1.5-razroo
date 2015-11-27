@@ -21,7 +21,7 @@ The following are included in this build (gulps equivalent obviously)
   * Include infrastructure for Jade
   * Plumber Included so that errors do not stop watch
 * Sass
-  * SMACSS File Infrastructure (Sass modified)
+  * 7-1 architecture
   * Plumber Included so that errors do not stop watch
 * Webpack
   * For this project included as a gulp stream
