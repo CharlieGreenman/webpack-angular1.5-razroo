@@ -36,9 +36,6 @@
 @import 'utils/_variables';
 
 //venders
-@import 'vendors/_foundation';
-
-@import 'foundation';
 
 
 body {
@@ -50,6 +47,7 @@ body {
 #drawing_container {
   position: absolute;
   margin: auto;
+  background: yellow;
   top: 0 ; right: 0; bottom: 0; left: 0 ;
   width: 500px;
   height: 500px;

@@ -1,5 +1,5 @@
 {
-  "name": "hamm-with-gulp",
+  "name": "NWRB",
   "version": "0.1.0",
   "author": "Charlie Greenman",
   "private": true,
@@ -21,7 +21,9 @@
     "gulp-watch": "*",
     "gulp-webserver": "*",
     "gulp.spritesmith": "^4.1.1",
+    "jade": "^1.11.0",
     "jsx-loader": "^0.13.2",
+    "node-sass": "^3.4.2",
     "react-dom": "^0.14.0",
     "webpack": "^1.12.2",
     "webpack-stream": "^2.1.0",
@@ -37,5 +39,10 @@
     "rules": {
       "strict": 0
     }
+  },
+  "scripts": {
+    "watch": "npm run watch-jade & npm run watch-sass",
+    "watch-jade": "jade -wP ./app/**/*.jade -o ./dist",
+    "watch-sass": "node-sass -w ./app/**/*.scss -o ./dist/css"
   }
 }
