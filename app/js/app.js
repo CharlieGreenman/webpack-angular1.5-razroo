@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentloaded", domloaded, false);
+var React = require('react');
 
+document.addEventListener("DOMContentloaded", domloaded, false);
 
 /** Creates a canvas for loop
  @param {string} title - The title of the book.
