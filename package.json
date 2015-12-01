@@ -46,6 +46,6 @@
     "watch": "npm run watch-jade & npm run watch-sass & npm run watch-js",
     "watch-jade": "jade -wP ./app/**/*.jade -o ./dist",
     "watch-sass": "node-sass -w ./app/**/*.scss -o ./dist/css",
-    "watch-js": "webpack --watch"
+    "watch-js": "webpack-dev-server --content-base dist/ --inline webpack --watch"
   }
 }

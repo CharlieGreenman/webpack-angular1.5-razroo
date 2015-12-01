@@ -1,15 +1,17 @@
+var path = require("path");
+
 config = {
+    devtool: 'eval',
     // Makes sure errors in console map to the correct file
     // and line number
-    devtool: 'eval',
-    entry: "./app/js/app.js",
+    entry: [
+        'webpack-dev-server/client?http://localhost:8080',
+        path.resolve(__dirname, 'app/main.js')
+    ],
     output: {
-        path: __dirname + "/app",
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, "dist"),
+        filename: 'bundle.js'
 
-        // Everything related to Webpack should go through a build path,
-        // localhost:3000/build. That makes proxying easier to handle
-        publicPath: 'http://localhost:8090/dist'
     },
     module: {
         loaders: [
@@ -20,7 +22,6 @@ config = {
     output: {
         filename: "./dist/js/app.js"
     }
-
 };
 
 module.exports = config;
