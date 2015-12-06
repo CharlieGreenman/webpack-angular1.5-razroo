@@ -34,6 +34,7 @@
   "dependencies": {
     "babel-eslint": "^3.1.18",
     "imagemin-pngquant": "^4.1.0",
+    "json-loader": "^0.5.4",
     "react": "^0.14.0"
   },
   "eslintConfig": {
@@ -43,9 +44,9 @@
     }
   },
   "scripts": {
-    "watch": "npm run watch-jade & npm run watch-sass & npm run watch-js",
+    "watch": "npm run watch-jade & npm run watch-sass & npm run webpack-dev-server",
     "watch-jade": "jade -wP ./app/**/*.jade -o ./dist",
     "watch-sass": "node-sass -w ./app/**/*.scss -o ./dist/css",
-    "watch-js": "webpack-dev-server --content-base dist/ --inline webpack --watch"
+    "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
   }
 }
