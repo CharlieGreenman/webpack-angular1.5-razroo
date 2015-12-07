@@ -1,4 +1,9 @@
 var path = require("path");
+var open = require("open");
+
+//a little bit of glitch before page opens,
+//works well otherwise
+open("http://localhost:8080/");
 
 module.exports = {
     entry: [
@@ -16,9 +21,10 @@ module.exports = {
             { test: /\.json$/, loader: 'json'}
         ],
         loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
+            {test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
             {test: /\.js$/, exclude: /node_modules/, loader: "eslint-loader" },
             {test: /\.scss$/,loaders: ["style", "css", "sass"]}
         ]
     }
 };
+
