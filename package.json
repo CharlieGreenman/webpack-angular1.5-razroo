@@ -45,9 +45,7 @@
     }
   },
   "scripts": {
-    "watch": "npm run watch-jade & npm run watch-sass & npm run webpack-dev-server",
-    "watch-jade": "jade -wP ./app/**/*.jade -o ./dist",
-    "watch-sass": "node-sass -w ./app/**/*.scss -o ./dist/css",
+    "watch": "npm run webpack-dev-server",
     "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
   }
 }

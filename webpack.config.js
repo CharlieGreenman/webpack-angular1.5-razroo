@@ -23,7 +23,9 @@ module.exports = {
         loaders: [
             {test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
             {test: /\.js$/, exclude: /node_modules/, loader: "eslint-loader" },
-            {test: /\.scss$/,loaders: ["style", "css", "sass"]}
+            {test: /\.scss$/,loaders: ["style", "css", "sass"]},
+            { test: /\.jade/, exclude: /node_modules/, loader: "jade" }
+
         ]
     }
 };
