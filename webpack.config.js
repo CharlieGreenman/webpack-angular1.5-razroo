@@ -7,17 +7,18 @@ module.exports = {
         path.resolve(__dirname, 'app/js/app.js')
     ],
     output: {
-        path: path.resolve(__dirname, 'dist/js'),
+        path: path.resolve(__dirname, 'dist/'),
         publicPath: 'js',
         filename: 'bundle.js'
+    },
+    module: {
+        preLoaders: [
+            { test: /\.json$/, loader: 'json'}
+        ],
+        loaders: [
+            { test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
+            {test: /\.js$/, exclude: /node_modules/, loader: "eslint-loader" },
+            {test: /\.scss$/,loaders: ["style", "css", "sass"]}
+        ]
     }
-//    //module: {
-//    //    preLoaders: [
-//    //        { test: /\.json$/, loader: 'json'}
-//    //    ],
-//    //    loaders: [
-//    //        { test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
-//    //        {test: /\.js$/, exclude: /node_modules/, loader: "eslint-loader" }
-//    //    ]
-//    //}
 };
