@@ -12,7 +12,7 @@ module.exports = {
         path.resolve(__dirname, 'app/js/app.js')
     ],
     output: {
-        path: path.resolve(__dirname, 'dist/'),
+        path: path.resolve(__dirname, './dist/js'),
         publicPath: 'js',
         filename: 'bundle.js'
     },
@@ -21,11 +21,10 @@ module.exports = {
             { test: /\.json$/, loader: 'json'}
         ],
         loaders: [
-            {test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
-            {test: /\.js$/, exclude: /node_modules/, loader: "eslint-loader" },
-            {test: /\.scss$/,loaders: ["style", "css", "sass"]},
-            { test: /\.jade/, exclude: /node_modules/, loader: "jade" }
-
+            {test: /\.scss$/,loaders: ["style", "css", "autoprefixer-loader", "sass"]},
+            {test: /\.jade/, loader: "jade" },
+            {test: /\.js$/,  loader: 'babel'},
+            {test: /\.js$/, loader: "eslint-loader" }
         ]
     }
 };
