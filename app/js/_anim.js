@@ -1,1 +1,1 @@
-module.exports = 'refuge foreversas';
+module.exports = "refuge foreversas";
