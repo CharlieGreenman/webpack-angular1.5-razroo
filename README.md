@@ -1,14 +1,10 @@
 #Build system is in the process of being converted from gulp to NPM
-# A Webpack + Gulp Build System goin' Hamm
-![goin' ham with Hamm](http://33.media.tumblr.com/dde15901a30e33fda2db472bd3e5849e/tumblr_inline_mi5adv4Qyh1rompwx.gif)
+# A NPM + Webpack + Build System
+![New RuB](http://i.giphy.com/JSsFJsN1ZYY00.gif)
 
 
 ##two separate builds##
-There is a default build for development.
-There is a production build, that goes into the folder called publish.
-To use production, type in your terminal, or cmd gulp publish.
-
-The following are included in this build (gulps equivalent obviously)
+The following are included in this build
 
 * Watch
   * Jade
@@ -37,24 +33,12 @@ The following are included in this build (gulps equivalent obviously)
 * Eslint
     * Babel support included
 * Autoprefixer
-* BrowserSync for:
-  * Jade
-  * Sass
-  * Javascript
 * JSDoc
   * Documentation for Javascript
-* Bower
-  * In distribution folder for simple file transfer
-  * js files automatically included using wiredep
-* Wiredep included for automatic bower injection
-    * Works with Jade + jade include file structure
-    *
-* Imagemin
-    * Png + SVG + JPG GIF images minified
-* Spritesmith
-    * turn all of your png's into ready to use sprite images
-* Concat JS files
-  * all js files in repository are concatenated together
+* NPM
+  * Packages are managed through NPM
+
+
 
 | Phase  | Task                                                                 | Complete |
 |--------|----------------------------------------------------------------------|----------|
@@ -63,6 +47,5 @@ The following are included in this build (gulps equivalent obviously)
 | 3      | Make build professional grade                                        | Yes      |
 | 4      | Allow for Webpack use                                                | Yes      |
 | 5      | Allow for use with React, React Dom and JSX, To be use with Webpack. | Yes      |
-| 6      | Turn into a Slush build catering to web  app production              |          |
+| 6      | Convert from a Gulp build to an NPM + Webpack Build                  | Almost   |
 
-The following will become optional in yeoman framework
