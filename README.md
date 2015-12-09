@@ -1,6 +1,5 @@
-#Build system is in the process of being converted from gulp to NPM
-# A NPM + Webpack + Build System
-![New RuB](http://i.giphy.com/JSsFJsN1ZYY00.gif)
+# An NPM + Webpack + Build System
+![New RuB](http://gph.is/1IO3FYz)
 
 
 ##two separate builds##
