@@ -1,5 +1,5 @@
 # An NPM + Webpack + Build System
-![New RuB](http://gph.is/1IO3FYz)
+![New RuB](http://media.giphy.com/media/6XO6BpBQoZHiw/giphy.gif)
 
 
 ##two separate builds##
