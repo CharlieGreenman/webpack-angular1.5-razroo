@@ -1,9 +1,6 @@
 # An NPM + Webpack + Build System
-![New RuB](http://media.giphy.com/media/6XO6BpBQoZHiw/giphy.gif)
 
-
-##two separate builds##
-The following are included in this build
+--> As of now this build is purely for development purposes, with react in mind.
 
 * Watch
   * Jade
