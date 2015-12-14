@@ -30,8 +30,7 @@
   "dependencies": {
     "babel-eslint": "^3.1.18",
     "imagemin-pngquant": "^4.1.0",
-    "json-loader": "^0.5.4",
-    "react": "^0.14.0"
+    "json-loader": "^0.5.4"
   },
   "eslintConfig": {
     "parser": "babel-eslint",

@@ -15,6 +15,7 @@ module.exports = {
         path: path.resolve(__dirname, './dist/js'),
         publicPath: '/js',
         filename: 'bundle.js'
+
     },
     module: {
         preLoaders: [
