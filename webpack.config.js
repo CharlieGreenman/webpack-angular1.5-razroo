@@ -1,5 +1,6 @@
 var path = require("path");
 var open = require("open");
+var node_modules_dir = path.join(__dirname, 'node_modules');
 
 //a little bit of glitch before page opens,
 //works well otherwise
@@ -11,6 +12,12 @@ module.exports = {
         'webpack-dev-server/client?http://localhost:8080/dist',
         path.resolve(__dirname, 'app/js/app.js')
     ],
+    include: [
+        path.resolve(__dirname, "app/jade"),
+        path.resolve(__dirname, "app/js"),
+        path.resolve(__dirname, "app/scss")
+
+    ],
     output: {
         path: path.resolve(__dirname, './dist/js'),
         publicPath: '/js',
@@ -19,11 +26,11 @@ module.exports = {
     },
     module: {
         preLoaders: [
-            {test: /\.js$/, loader: "eslint-loader",  exclude: /node_modules/ }
+            {test: /\.js$/, loader: "eslint-loader", exclude:  node_modules_dir }
         ],
         loaders: [
-            {test: /\.scss$/,loaders: ["style", "css", "autoprefixer-loader", "sass"]},
-            {test: /\.jade/, loader: "jade" },
+            {test: /\.scss$/,loaders: ["style", "css", "autoprefixer-loader", "sass"], exclude:  node_modules_dir},
+            {test: /\.jade/,  loader: "jade", exclude:  node_modules_dir },
             {test: /\.js$/,  loader: 'babel'}
         ]
     },
