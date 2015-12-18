@@ -26,12 +26,16 @@ module.exports = {
     },
     module: {
         preLoaders: [
-            {test: /\.js$/, loader: "eslint-loader", exclude:  node_modules_dir }
+            {test: /\.js$/, loader: "eslint-loader", include: path.resolve(__dirname, 'app')}
         ],
         loaders: [
             {test: /\.scss$/,loaders: ["style", "css", "autoprefixer-loader", "sass"], exclude:  node_modules_dir},
             {test: /\.jade/,  loader: "jade", exclude:  node_modules_dir },
-            {test: /\.js$/,  loader: 'babel'}
+            {test: /\.js$/,  loader: 'babel', query:
+                {
+                    presets:['react']
+                }
+            }
         ]
     },
     eslint: {

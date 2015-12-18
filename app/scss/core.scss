@@ -36,7 +36,7 @@
 @import 'utils/_variables';
 
 //venders
-
+@import 'vendors/foundation';
 
 body {
   background-color: mediumturquoise;
@@ -53,3 +53,6 @@ body {
   height: 500px;
 }
 
+.column{
+  background: black;
+}
