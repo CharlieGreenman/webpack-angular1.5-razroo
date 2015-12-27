@@ -1,4 +1,5 @@
-//var jade = require("../jade/index.jade")();
+import React from "react";
+import ReactDOM from "react-dom";
 require("../scss/core.scss");
 
 var txt = require("./_anim.js") + "l";
