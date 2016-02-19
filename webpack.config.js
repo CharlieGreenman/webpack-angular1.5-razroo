@@ -1,5 +1,6 @@
 var path = require("path");
 var open = require("open");
+require('es6-promise').polyfill();
 
 //a little bit of glitch before page opens,
 //works well otherwise
