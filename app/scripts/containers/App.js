@@ -4,3 +4,5 @@ import {connect} from 'react-redux';
 class App extends Component {
 
 }
+
+export default connect(mapStateToProps)(NavContainer);
