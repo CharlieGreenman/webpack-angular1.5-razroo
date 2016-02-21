@@ -1,5 +1,6 @@
 var path = require("path");
 var open = require("open");
+//for legac systems
 require('es6-promise').polyfill();
 
 //a little bit of glitch before page opens,
@@ -10,7 +11,7 @@ module.exports = {
     entry: [
         //'webpack/hot/dev-server',
         'webpack-dev-server/client?http://localhost:8080/dist',
-        path.resolve(__dirname, 'app/scripts/app.js')
+        path.resolve(__dirname, 'app/scripts/main.js')
     ],
     output: {
         path: path.resolve(__dirname, './dist/js'),
