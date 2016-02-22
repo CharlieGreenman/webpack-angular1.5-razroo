@@ -5,4 +5,5 @@ class App extends Component {
 
 }
 
-export default connect(mapStateToProps)(NavContainer);
+
+export default connect(mapStateToProps)(App);
