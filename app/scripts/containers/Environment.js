@@ -1,12 +1,18 @@
 import React, {Component, PropTypes} from "react";
 import ReactDOM from "react-dom";
 import {connect} from "react-redux";
-import Environment from "../containers/Environment.js";
+import Form from "../components/showHide.js";
 
 class App extends Component {
   render(){
+    if(types.Hide){
+      console.log("app hidden");
+    }
+    if(types.SHOW){
+      console.log("app shown");
+    }
     return(
-      <Environment/>
+      <Form/>
     );
   }
 }

@@ -1,17 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, {Component, PropTypes} from "react";
 
-class Form extends React.Component {
+class Form extends Component {
+  constructor() {
+    super();
+  }
     render() {
         return(
-        <div>
+        <div className = "works">
           <button id="show-block" type="button" className="column large-6 tiny">show</button>
           <button id="hide-block" type="button" className="column large-6 tiny">Hide</button>
-        </div>  
-        )
+        </div>
+      );
     }
 }
-
-
 
 export default Form;

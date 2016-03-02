@@ -18,6 +18,8 @@ module.exports = {
         publicPath: 'js',
         filename: 'bundle.js'
     },
+    debug: true,
+    devtool: "#eval-source-map",
     module: {
         preLoaders: [
             {test: /\.js$/, loader: "eslint-loader",  exclude: /node_modules/ }
