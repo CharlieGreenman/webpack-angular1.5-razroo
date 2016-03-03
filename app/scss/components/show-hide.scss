@@ -1,9 +1,16 @@
 #show-block{
-  height: 100px;
-  width: 200px;
+  height: 50px;
+  width: 50%;
 }
 
 #hide-block{
-  height: 100px;
-  width: 200px;
+  height: 50px;
+  width: 50%;
+}
+
+.show-hide-button{
+  cursor: pointer;
+  text-transform: uppercase;
+  background: black;
+  color: white;
 }

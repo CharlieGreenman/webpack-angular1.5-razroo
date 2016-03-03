@@ -11,7 +11,7 @@ dispatch(showBlock(show));
 
 export function hideBlock(hide) {
     return {
-        type: types.SHOW,
+        type: types.Hide,
         hide
     };
 }
