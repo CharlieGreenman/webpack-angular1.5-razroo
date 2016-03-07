@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes';
+import * as types from "../constants/ActionTypes";
 
 export function showBlock(show) {
     return {
@@ -7,13 +7,9 @@ export function showBlock(show) {
     };
 }
 
-dispatch(showBlock(show));
-
 export function hideBlock(hide) {
     return {
-        type: types.Hide,
+        type: types.HIDE,
         hide
     };
 }
-
-dispatch(hideBlock(hide));
