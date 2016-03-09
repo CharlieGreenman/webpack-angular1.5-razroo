@@ -1,19 +1,18 @@
 import * as types from "../constants/ActionTypes";
 
 const initialState = {
-    type: types.SHOW
+    show: false
 };
 
 export default function environment(state = initialState, action) {
-  console.log(action);
     switch(action.type) {
         case types.HIDE:
             return Object.assign({}, state, {
-                hide: action.hide
+                show: false
             });
         case types.SHOW:
             return Object.assign({}, state, {
-                show: action.show
+                show: true
             });
         default:
               return state;

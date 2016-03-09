@@ -24,14 +24,15 @@ class Form extends Component {
   hideBlock(){
     const{dispatch} = this.props;
     dispatch(hideBlock);
-    this.renderColorBlock();
     console.log(dispatch(hideBlock));
+    this.renderColorBlock();
+
   }
   showBlock(){
     const{dispatch} = this.props;
     dispatch(showBlock);
-    this.renderColorBlock();
     console.log(dispatch(showBlock));
+    this.renderColorBlock();
   }
   renderColorBlock(){
     const{environment, dispatch} = this.props;
@@ -65,8 +66,9 @@ class Form extends Component {
 }
 
 function mapStateToProps(state) {
-  const {environment} = state;
+  const {environment, show} = state;
   return{
+    show,
     environment
   }
 }

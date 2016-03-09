@@ -6,12 +6,6 @@ import * as types from "../constants/ActionTypes";
 
 class App extends Component {
   render(){
-    if(types.Hide){
-      console.log("app hidden");
-    }
-    if(types.SHOW){
-      console.log("app shown");
-    }
     return(
       <Form/>
     );
