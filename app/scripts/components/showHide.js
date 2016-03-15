@@ -11,6 +11,10 @@ class Form extends Component {
     this.showBlock = this.showBlock.bind(this);
     this.renderColorBlock = this.renderColorBlock.bind(this);
   }
+  componentWillMount(){
+    const{dispatch} = this.props;
+    dispatch(showBlock);
+  }
   handleClick(e){
     console.log("click");
     //was turning up as undefined
@@ -25,20 +29,20 @@ class Form extends Component {
     const{dispatch} = this.props;
     dispatch(hideBlock);
     console.log(dispatch(hideBlock));
-    this.renderColorBlock();
+    // this.renderColorBlock();
 
   }
   showBlock(){
     const{dispatch} = this.props;
     dispatch(showBlock);
     console.log(dispatch(showBlock));
-    this.renderColorBlock();
+    // this.renderColorBlock();
   }
   renderColorBlock(){
     const{environment, dispatch} = this.props;
     console.log("cur environment" + JSON.stringify(environment));
     console.log("show environment" + environment.show);
-    if(environment.show){
+    if(environment.show === true){
         return(
           <div className = "works">
             <button id="show-block" type="button" className="show-hide-button" onClick={this.showBlock}>show</button>
@@ -53,7 +57,6 @@ class Form extends Component {
         <button id="hide-block" type="button" className="show-hide-button" onClick={this.hideBlock}>Hide</button>
       </div>
     );
-
   }
     render() {
       const {dispatch} = this.props;
@@ -64,12 +67,10 @@ class Form extends Component {
       );
     }
 }
-
 function mapStateToProps(state) {
-  const {environment, show} = state;
+  const {environment, showBlock} = state;
   return{
-    show,
-    environment
+    showBlock
   }
 }
 

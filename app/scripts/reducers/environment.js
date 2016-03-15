@@ -8,11 +8,11 @@ export default function environment(state = initialState, action) {
     switch(action.type) {
         case types.HIDE:
             return Object.assign({}, state, {
-                show: false
+                type: types.HIDE
             });
         case types.SHOW:
             return Object.assign({}, state, {
-                show: true
+                type: types.SHOW
             });
         default:
               return state;
