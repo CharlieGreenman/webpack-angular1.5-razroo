@@ -21,20 +21,18 @@ class Form extends Component {
     //solved by realizing have to use connect
     //https://github.com/reactjs/redux/issues/916
     const{dispatch} = this.props;
-    dispatch(showBlock);
+    dispatch(showBlock());
     this.renderColorBlock();
     console.log(dispatch(showBlock));
   }
   hideBlock(){
     const{dispatch} = this.props;
-    dispatch(hideBlock);
+    dispatch(hideBlock());
     console.log(dispatch(hideBlock));
-    // this.renderColorBlock();
-
   }
   showBlock(){
     const{dispatch} = this.props;
-    dispatch(showBlock);
+    dispatch(showBlock());
     console.log(dispatch(showBlock));
     // this.renderColorBlock();
   }
@@ -68,9 +66,9 @@ class Form extends Component {
     }
 }
 function mapStateToProps(state) {
-  const {environment, showBlock} = state;
+  const {environment} = state;
   return{
-    showBlock
+    environment
   }
 }
 

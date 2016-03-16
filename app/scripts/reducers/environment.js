@@ -5,16 +5,13 @@ const initialState = {
 };
 
 export default function environment(state = initialState, action) {
-    switch(action.type) {
-        case types.HIDE:
-            return Object.assign({}, state, {
-                type: types.HIDE
-            });
-        case types.SHOW:
-            return Object.assign({}, state, {
-                type: types.SHOW
-            });
-        default:
-              return state;
+   switch(action.type) {
+      case types.HIDE:
+      case types.SHOW:
+          return Object.assign({}, state, {
+              show: action.show
+          });
+      default:
+          return state;
     }
-}
+ }
