@@ -1,6 +1,9 @@
 # An NPM + Webpack + Build System
 
---> As of now this build is purely for development purposes, with react in mind.
+##To use run the following commands
+''npm install''
+''npm run jade''
+''npm run watch''
 
 * Watch
   * Jade
@@ -44,4 +47,3 @@
 | 4      | Allow for Webpack use                                                | Yes      |
 | 5      | Allow for use with React, React Dom and JSX, To be use with Webpack. | Yes      |
 | 6      | Convert from a Gulp build to an NPM + Webpack Build                  | Almost   |
-
