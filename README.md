@@ -1,9 +1,9 @@
 # An NPM + Webpack + Build System
 
 ##To use run the following commands
-''npm install''
-''npm run jade''
-''npm run watch''
+``npm install``
+``npm run jade``
+``npm run watch``
 
 * Watch
   * Jade
