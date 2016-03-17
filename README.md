@@ -17,10 +17,8 @@
     * watches all js files in the js folder
 * Jade
   * Include infrastructure for Jade
-  * Plumber Included so that errors do not stop watch
 * Sass
   * 7-1 architecture
-  * Plumber Included so that errors do not stop watch
 * Webpack
   * For this project included as a gulp stream
   * will automatically concatenate js files
@@ -31,11 +29,11 @@
   * allow for Jsx support with React
 * React
   * along with webpack simply call var React = require("./react");
+* redux
+  * includes redux dev tools  
 * Eslint
     * Babel support included
 * Autoprefixer
-* JSDoc
-  * Documentation for Javascript
 * NPM
   * Packages are managed through NPM
 
@@ -48,4 +46,4 @@
 | 3      | Make build professional grade                                        | Yes      |
 | 4      | Allow for Webpack use                                                | Yes      |
 | 5      | Allow for use with React, React Dom and JSX, To be use with Webpack. | Yes      |
-| 6      | Convert from a Gulp build to an NPM + Webpack Build                  | Almost   |
+| 6      | Convert from a Gulp build to an NPM + Webpack Build                  | Yes      |
