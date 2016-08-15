@@ -23,6 +23,7 @@
     "node-sass": "^3.4.2",
     "open": "0.0.5",
     "path": "^0.12.7",
+    "pug": "^2.0.0-beta5",
     "react": "^0.14.3",
     "react-dom": "^0.14.0",
     "redux": "^3.3.1",
@@ -49,8 +50,8 @@
     }
   },
   "scripts": {
-    "watch": "npm run webpack-dev-server",
-    "jade": "jade -P ./app/**/*.jade -o ./dist",
+    "start": "npm run webpack-dev-server",
+    "pug": "pug -Pw ./app/**/*.pug -o ./dist",
     "sass": "node-sass -P ./app/**/*.scss -o ./dist/scss ",
     "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
   }
