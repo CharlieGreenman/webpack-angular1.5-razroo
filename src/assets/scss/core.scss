@@ -1,0 +1,56 @@
+/*
+###########################
+###Heavy Usage of SMACCS###
+###########################
+*/
+
+@import 'base/_reset';
+@import 'base/_typography';
+
+//components
+@import 'components/_buttons';
+@import 'components/_carousel';
+@import 'components/_cover';
+@import 'components/_dropdowns';
+@import 'components/show-hide';
+
+//layout
+@import 'layout/_footer';
+@import 'layout/_form';
+@import 'layout/_grid';
+@import 'layout/_header';
+@import 'layout/_navigation';
+@import 'layout/_sidebar';
+
+//pages
+@import 'pages/_contact';
+@import 'pages/_home';
+
+//themes
+@import 'themes/_admin';
+@import 'themes/_theme';
+
+//utils
+@import 'utils/_functions';
+@import 'utils/_helpers';
+@import 'utils/_mixins';
+@import 'utils/_variables';
+
+body {
+  background-color: mediumturquoise;
+  width: 100%;
+  height: 100%;
+}
+
+#drawing_container {
+  position: absolute;
+  margin: auto;
+  background: orange;
+  top: 0 ; right: 0; bottom: 0; left: 0 ;
+  width: 500px;
+  height: 500px;
+}
+
+.column{
+  background: black;
+}

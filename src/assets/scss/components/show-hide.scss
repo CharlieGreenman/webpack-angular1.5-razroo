@@ -1,0 +1,25 @@
+#show-block{
+  height: 50px;
+  width: 50%;
+}
+
+#hide-block{
+  height: 50px;
+  width: 50%;
+}
+
+.show-hide-button{
+  cursor: pointer;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+}
+
+#color-block{
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: black;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+}
