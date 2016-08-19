@@ -46,7 +46,7 @@
   },
   "scripts": {
     "start": "npm run webpack-dev-server",
-    "pug": "pug -Pw ./app/**/*.pug -o ./dist",
+    "pug": "pug -Pw ./src/assets/**/*.pug -o ./dist",
     "sass": "node-sass -P ./app/**/*.scss -o ./dist/scss ",
     "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
   }
