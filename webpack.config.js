@@ -11,7 +11,7 @@ module.exports = {
     entry: [
         //'webpack/hot/dev-server',
         'webpack-dev-server/client?http://localhost:8080',
-        path.resolve(__dirname, 'app/scripts/main.js')
+        path.resolve(__dirname, 'src/app/main.js')
     ],
     output: {
         path: path.resolve(__dirname, './dist/js'),
