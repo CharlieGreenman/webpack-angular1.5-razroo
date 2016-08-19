@@ -18,30 +18,25 @@
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
     "jquery": "^2.1.4",
-    "jsx-loader": "^0.13.2",
     "loader": "^2.0.0",
     "node-sass": "^3.4.2",
     "open": "0.0.5",
     "path": "^0.12.7",
     "pug": "^2.0.0-beta5",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.0",
-    "redux": "^3.3.1",
-    "redux-loader": "^0.4.2",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
     "babel-eslint": "^4.1.6",
     "babel-plugin-transform-runtime": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "es6-promise": "^3.1.2",
     "imagemin-pngquant": "^4.1.0",
-    "json-loader": "^0.5.4",
-    "react-redux": "^4.4.0",
-    "redux-thunk": "^1.0.3"
+    "json-loader": "^0.5.4"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
