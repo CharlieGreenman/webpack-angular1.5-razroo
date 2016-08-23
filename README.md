@@ -45,5 +45,5 @@ This build is largely influenced by the architecture found in the [article here]
 | 2      | Separate build for development and production                        | Yes      |
 | 3      | Add css-modules                                                      | No       |
 | 4      | Add ng-redux                                                         | No       |
-| 5      | Add Protracter to app                                                | Yes      |
-| 6      | Add Karma and Jasmine                                                | Yes      |
+| 5      | Add Protracter to app                                                | No       |
+| 6      | Add Karma and Jasmine                                                | No       |
