@@ -1,4 +1,4 @@
-# An NPM + Webpack + Build System
+# An NPM + Webpack + Angular 1.5 Build System
 
 ##To use run the following commands
 ``npm install``
@@ -7,18 +7,22 @@
 
 ``npm run watch``
 
+This build is largely influenced by the architecture found in the [article here](https://scotch.io/tutorials/angularjs-best-practices-directory-structure)
+. In addition, as Angular 1.5 introduces components, this build is going to try and be as progressive as possible. Some
+ of the things that are in the pipeline, are css-modules, testing with jasmine, karma and protracter, ng-redux, and
+ eslint.
+
+ Some of the things that this build already includes. Webpack
+
 * Watch
   * Jade
     * Watches root jade and jade includes
-  * Sass
-    * Watches root Sass and Sass imports
-    * uglifies/minifies sass
   * Javascript
     * watches all js files in the js folder
 * Jade
   * Include infrastructure for Jade
 * Sass
-  * 7-1 architecture
+  * Archtiecture TODO
 * Webpack
   * For this project included as a gulp stream
   * will automatically concatenate js files
@@ -27,10 +31,6 @@
   * allow for es6 to es5 conversion
 *Jsx-loader
   * allow for Jsx support with React
-* React
-  * along with webpack simply call var React = require("./react");
-* redux
-  * includes redux dev tools  
 * Eslint
     * Babel support included
 * Autoprefixer
@@ -41,9 +41,9 @@
 
 | Phase  | Task                                                                 | Complete |
 |--------|----------------------------------------------------------------------|----------|
-| 1      | Create base gulp build                                               | Yes      |
+| 1      | Create base webpack build                                            | Yes      |
 | 2      | Separate build for development and production                        | Yes      |
-| 3      | Make build professional grade                                        | Yes      |
-| 4      | Allow for Webpack use                                                | Yes      |
-| 5      | Allow for use with React, React Dom and JSX, To be use with Webpack. | Yes      |
-| 6      | Convert from a Gulp build to an NPM + Webpack Build                  | Yes      |
+| 3      | Add css-modules                                                      | No       |
+| 4      | Add ng-redux                                                         | No       |
+| 5      | Add Protracter to app                                                | Yes      |
+| 6      | Add Karma and Jasmine                                                | Yes      |
