@@ -1,5 +1,6 @@
 var path = require("path");
 var open = require("open");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 //for legac systems
 require('es6-promise').polyfill();
 
@@ -20,11 +21,25 @@ module.exports = {
     },
     debug: true,
     devtool: "#eval-source-map",
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Webpack Starter Angular - kitconcept',
+        template: 'dist/index.html',
+        minify: {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true
+        }
+      })
+    ],
     module: {
         preLoaders: [
             {test: /\.js$/, loader: "eslint-loader",  exclude: /node_modules/ }
         ],
         loaders: [
+            { test: /\.html$/, loader: "html" },
             {test: /\.scss$/,loaders: ["style", "css", "autoprefixer-loader", "sass"]},
             {test: /\.jade/, loader: "jade" },
             {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel',
