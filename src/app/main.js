@@ -1,5 +1,4 @@
 require("../assets/scss/core.scss");
-
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import AppComponent from './app.component.js';
@@ -10,4 +9,10 @@ angular.module("myApp", [
     // Common.name,
     Components.name
 ])
-.directive("app", AppComponent);
+.directive("app", AppComponent)
+
+.filter('makeUppercase', function () {
+  return function (item) {
+    return item.toUpperCase();
+  };
+});
