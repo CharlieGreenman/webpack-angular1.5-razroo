@@ -40,7 +40,8 @@ module.exports = {
         ],
         loaders: [
             { test: /\.html$/, loader: "html" },
-            {test: /\.scss$/,loaders: ["style", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!sass?sourceMap", "autoprefixer-loader", "sass"]},
+            {test: /\.scss$/,loaders: ["style", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]", "autoprefixer-loader", "sass"]},
+            {test: /\.css$/,loaders: ["style", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]"]},
             {test: /\.jade/, loader: "jade" },
             {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel',
                 query: {
