@@ -1,4 +1,4 @@
-import styles from './home.css';
+import styles from '../../../assets/scss/home.scss';
 
 class HomeController {
   constructor() {
