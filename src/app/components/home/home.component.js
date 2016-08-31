@@ -1,4 +1,4 @@
-import template from './home.html';
+import template from './home.pug';
 import controller from './home.controller';
 
 let homeComponent = {
