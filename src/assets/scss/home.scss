@@ -1,3 +1,14 @@
-.homeHeader{
+.header{
   color: orange;
+}
+
+.container{
+  width: 500px;
+  height: 500px;
+  background: cornflowerblue;
+  position: absolute;
+  top: 50%;
+  margin-top: -250px;
+  left: 50%;
+  margin-left: -250px;
 }
