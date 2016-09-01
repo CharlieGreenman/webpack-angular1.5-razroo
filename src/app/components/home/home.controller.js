@@ -10,10 +10,6 @@ class HomeController {
     }
   }
 
-  search(){
-    console.log('controller works');
-  };
-
 }
 
 export default HomeController;

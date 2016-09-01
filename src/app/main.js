@@ -1,4 +1,3 @@
-require("../assets/scss/core.scss");
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import AppComponent from './app.component.js';
