@@ -1,49 +1,76 @@
 # An NPM + Webpack + Angular 1.5 Build System
 
-##To use run the following commands
+## To use run the following commands ##
+
 ``npm install``
 
 ``npm run jade``
 
 ``npm run watch``
 
-This build is largely influenced by the architecture found in the [article here](https://scotch.io/tutorials/angularjs-best-practices-directory-structure)
-. In addition, as Angular 1.5 introduces components, this build is going to try and be as progressive as possible. Some
- of the things that are in the pipeline, are css-modules, testing with jasmine, karma and protracter, ng-redux, and
- eslint.
+Build is influenced by architecture found in the [AngularJS Best Practices: Directory Structure Article](https://scotch.io/tutorials/angularjs-best-practices-directory-structure)
 
- Some of the things that this build already includes. Webpack
+### The following is the file architecture for this project ###
+- app
+  - shared   // acts as reusable components or partials of our site
+    - sidebar/
+      - sidebarDirective.js
+      - sidebarView.html
+    - article/
+      - articleDirective.js
+      - articleView.html
+  - components/   // each component is treated as a mini Angular app
+    - home/
+      - homeController.js
+      - homeService.js
+      - homeView.html
+    - blog/
+      - blogController.js
+      - blogService.js
+      - blogView.html
+  - app.module.js
+  - app.routes.js
+- assets/
+  - img         // Images and icons for your app
+  - css      // All styles and style related files (SCSS or LESS files)
+  - js       // JavaScript files written for your app that are not for angular
+  - libs     // Third-party libraries such as jQuery, Moment, Underscore, etc.
+index.html
 
-* Watch
+As Angular 1.5 introduces components, this build tries to be as progressive as possible. For instance, it uses css-modules, testing with jasmine, karma, protracter, ng-redux, and eslint.
+
+ Some of the things that this build includes. Webpack
+
+* `npm Start`
   * Jade
-    * Watches root jade and jade includes
+    * pug-html-loader // Can write in pug and hook directly into angular template
   * Javascript
-    * watches all js files in the js folder
-* Jade
-  * Include infrastructure for Jade
+    * ES6
 * Sass
-  * Archtiecture TODO
+  * watch hot reloading
+  * Included in assets folder
+  * Uses css-modules
 * Webpack
   * For this project included as a gulp stream
   * will automatically concatenate js files
   * uses babel with js and allows for importing and exporting modules as well
 * Babel-loader
   * allow for es6 to es5 conversion
-*Jsx-loader
-  * allow for Jsx support with React
 * Eslint
     * Babel support included
+    * angular support
+    * uses airbnb eslinter
 * Autoprefixer
+  * Automatically adds prefixes to css when needed
 * NPM
   * Packages are managed through NPM
 
 
 
-| Phase  | Task                                                                 | Complete |
-|--------|----------------------------------------------------------------------|----------|
-| 1      | Create base webpack build                                            | Yes      |
-| 2      | Separate build for development and production                        | Yes      |
-| 3      | Add css-modules                                                      | No       |
-| 4      | Add ng-redux                                                         | No       |
-| 5      | Add Protracter to app                                                | No       |
-| 6      | Add Karma and Jasmine                                                | No       |
+| Priority  | Todo                                                                 |
+|-----------|----------------------------------------------------------------------|
+| 1         | Eslint                                                               |
+| 2         | Routing                                                              |
+| 3         | ng-redux                                                             |
+| 4         | Protracter                                                           |
+| 5         | Karma and Jasmine                                                    |
