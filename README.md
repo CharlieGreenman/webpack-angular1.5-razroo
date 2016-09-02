@@ -69,7 +69,6 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
 
 | Priority  | Todo                                                                 |
 |-----------|----------------------------------------------------------------------|
-| 1         | Routing                                                              |
-| 2         | ng-redux                                                             |
-| 3         | Protracter                                                           |
-| 4         | Karma and Jasmine                                                    |
+| 1         | ng-redux                                                             |
+| 2         | Protracter                                                           |
+| 3         | Karma and Jasmine                                                    |
