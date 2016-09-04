@@ -2,8 +2,6 @@ import {combineReducers} from "redux";
 
 import environment from "../reducers/environment.js";
 
-const rootReducer = combineReducers({
+export const RootReducer = combineReducers({
   environment
 });
-
-export default rootReducer;
