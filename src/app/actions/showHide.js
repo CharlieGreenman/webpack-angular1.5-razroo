@@ -1,5 +1,7 @@
 import * as types from "../constants/ActionTypes";
 
+/*eslint-disable*/
+
 export function showBlock(show) {
     return {
         type: types.SHOW,

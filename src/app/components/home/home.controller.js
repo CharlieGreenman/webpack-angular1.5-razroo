@@ -1,4 +1,5 @@
 import styles from '../../../assets/scss/home.scss';
+import showHide from '../../actions/showHide'
 
 class HomeController {
   constructor($ngRedux) {
@@ -8,16 +9,23 @@ class HomeController {
       name: 'guest',
       last: 'visitor'
     };
-    this.unsubscribe = $ngRedux.connect(this.mapStateToThis, TodoActions)(this);
+    /* eslint-disable */
+    this.unsubscribe = $ngRedux.connect(this.mapStateToThis, showHide)(this);
   }
 
   $onDestroy(){
     this.unsubscribe();
   }
 
+  testConsole(){
+    // console.log(showBlock());
+    // $ngRedux.dispatch(dispatchshowBlock());
+    console.log('function works');
+  }
+
   mapStateToThis(state) {
     return {
-      todos: state.todos
+      value: state.environment
     };
   }
 

@@ -6,6 +6,8 @@ import AppComponent from './app.component.js';
 import Components from './components/components';
 
 import{ RootReducer } from './reducers/index';
+import createLogger from 'redux-logger';
+
 // import configureStore from "./store/configureStore";
 // const store = configureStore();
 
@@ -17,7 +19,13 @@ angular.module("myApp", [
 ])
 .config(( $ngReduxProvider) => {
   "ngInject";
-   $ngReduxProvider.createStoreWith(RootReducer);
+
+  const logger = createLogger({
+    level: 'info',
+    collapsed: true
+  });
+  /*eslint-disable*/
+   $ngReduxProvider.createStoreWith(RootReducer, [logger]);
 })
 
 .directive("app", AppComponent);
