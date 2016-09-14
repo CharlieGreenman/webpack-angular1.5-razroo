@@ -45,7 +45,8 @@
     "imagemin-pngquant": "^4.1.0",
     "json-loader": "^0.5.4",
     "lodash": "^4.15.0",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
   },
   "eslintConfig": {
     "parser": "babel-eslint",

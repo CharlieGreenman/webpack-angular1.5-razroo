@@ -6,6 +6,8 @@ import AppComponent from './app.component.js';
 import Components from './components/components';
 
 import{ RootReducer } from './reducers/index';
+// import configureStore from "./store/configureStore";
+// const store = configureStore();
 
 angular.module("myApp", [
     uiRouter,
