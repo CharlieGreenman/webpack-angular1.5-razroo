@@ -12,3 +12,16 @@
   left: 50%;
   margin-left: -250px;
 }
+
+.button{
+  background: yellow;
+  width: 100px;
+  height: 50px;
+  border: 0;
+  margin-left: 15px;
+}
+
+.buttonFirst{
+  composes: button;
+  margin-left: 0;
+}
