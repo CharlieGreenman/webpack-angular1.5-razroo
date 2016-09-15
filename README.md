@@ -64,11 +64,13 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
   * Automatically adds prefixes to css when needed
 * NPM
   * Packages are managed through NPM
+* redux
+  * Uses ng-redux 
 
 
 
 | Priority  | Todo                                                                 |
 |-----------|----------------------------------------------------------------------|
-| 1         | ng-redux                                                             |
+| 1         | redux dev tools                                                      |
 | 2         | Protracter                                                           |
 | 3         | Karma and Jasmine                                                    |
