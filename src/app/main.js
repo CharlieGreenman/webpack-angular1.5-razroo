@@ -24,7 +24,7 @@ angular.module("myApp", [
     level: 'info',
     collapsed: true
   });
-  /*eslint-disable*/
+
    $ngReduxProvider.createStoreWith(RootReducer, [logger]);
 })
 
