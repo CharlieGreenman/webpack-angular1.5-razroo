@@ -1,8 +1,9 @@
 div(class='{{vm.styles.container}}')
   h1(class='{{vm.styles.header}}') You can find my template inside {{ vm.name }}.html
   button(ng-click='vm.showBlock()')
+  button(ng-click='vm.hideBlock()')
   ul
-    li {{vm.show}}
+    li {{vm.value}}
     li Angular 1.5
     li UI Router
     li Webpack

@@ -9,18 +9,11 @@ class HomeController {
       name: 'guest',
       last: 'visitor'
     };
-    /* eslint-disable */
     this.unsubscribe = $ngRedux.connect(this.mapStateToThis, ShowHide)(this);
   }
 
   $onDestroy(){
     this.unsubscribe();
-  }
-
-  testConsole(){
-    // console.log(showBlock());
-    $ngRedux.dispatch(dispatchshowBlock());
-    console.log('function works');
   }
 
   mapStateToThis(state) {
