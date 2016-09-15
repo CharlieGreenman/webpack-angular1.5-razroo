@@ -8,6 +8,8 @@
 
 ``npm run watch``
 
+In addition for this to work, you will have to download the chrome dev tools. 
+
 Build is influenced by architecture found in the [AngularJS Best Practices: Directory Structure Article](https://scotch.io/tutorials/angularjs-best-practices-directory-structure)
 
 ### The following is the file architecture for this project ###
