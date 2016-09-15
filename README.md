@@ -65,12 +65,12 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
 * NPM
   * Packages are managed through NPM
 * redux
-  * Uses ng-redux 
+  * Uses ng-redux
+  * redux dev tools included with use of redux tools chrome plugin
 
 
 
 | Priority  | Todo                                                                 |
 |-----------|----------------------------------------------------------------------|
-| 1         | redux dev tools                                                      |
-| 2         | Protracter                                                           |
-| 3         | Karma and Jasmine                                                    |
+| 1         | Protracter                                                           |
+| 2         | Karma and Jasmine                                                    |
