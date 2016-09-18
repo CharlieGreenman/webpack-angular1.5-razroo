@@ -5,7 +5,9 @@ div(class='{{vm.styles.container}}')
   button(class='{{vm.styles.button}}' ng-click='vm.hideBlock()')
     | Hide
   ul
-    li {{vm.value}}
+
+    li(ng-show="vm.value.show")
+      | block is now shown
     li Angular 1.5
     li UI Router
     li Webpack
