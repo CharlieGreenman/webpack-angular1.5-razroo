@@ -8,7 +8,7 @@
 
 ``npm run watch``
 
-In addition for this to work, you will have to download the chrome dev tools. 
+In addition for this to work, you will have to download the chrome dev tools.
 
 Build is influenced by architecture found in the [AngularJS Best Practices: Directory Structure Article](https://scotch.io/tutorials/angularjs-best-practices-directory-structure)
 
@@ -74,5 +74,5 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
 
 | Priority  | Todo                                                                 |
 |-----------|----------------------------------------------------------------------|
-| 1         | Protracter                                                           |
-| 2         | Karma and Jasmine                                                    |
+| 1         | Karma + Jasmine + Phantom                                            |
+| 2         | Protracter                                                           |
