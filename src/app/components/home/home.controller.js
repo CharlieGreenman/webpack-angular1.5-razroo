@@ -16,6 +16,11 @@ class HomeController {
     this.unsubscribe();
   }
 
+  //value specifically here for testing
+  addToValue10(val){
+    return val + 10;
+  }
+
   mapStateToThis(state) {
     return {
       value: state.environment
