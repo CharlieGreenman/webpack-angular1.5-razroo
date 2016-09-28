@@ -4,6 +4,7 @@
   "author": "Charlie Greenman",
   "private": true,
   "devDependencies": {
+    "angular-mocks": "^1.5.8",
     "autoprefixer-loader": "^3.1.0",
     "babel-core": "^6.2.1",
     "babel-eslint": "^6.1.2",
