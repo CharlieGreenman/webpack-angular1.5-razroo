@@ -8,8 +8,8 @@ var expect = require('chai').expect;
 let component;
 
 describe('home component testing', function() {
-  beforeEach(function() {
-      // addToValue10();
-  });
-  
+    beforeEach(function() {
+        // addToValue10();
+    });
+
 });
