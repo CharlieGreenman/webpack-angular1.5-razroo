@@ -6,6 +6,7 @@
   "devDependencies": {
     "angular-mocks": "^1.5.8",
     "autoprefixer-loader": "^3.1.0",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.2.1",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.0",
@@ -22,6 +23,8 @@
     "foundation-sites": "^6.0.6",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.22.0",
+    "isparta": "^4.0.0",
+    "istanbul": "^0.4.5",
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
     "jquery": "^2.1.4",
@@ -30,6 +33,7 @@
     "karma-jasmine": "^1.0.2",
     "karma-webpack": "^1.8.0",
     "loader": "^2.0.0",
+    "mocha": "^3.1.2",
     "ng-redux": "^3.4.0-beta.1",
     "node-sass": "^3.4.2",
     "open": "0.0.5",
@@ -63,9 +67,10 @@
     }
   },
   "scripts": {
-    "start": "npm install && npm run webpack-dev-server",
+    "start": "npm run webpack-dev-server",
     "pug": "pug -Pw ./src/assets/**/*.pug -o ./dist",
     "sass": "node-sass -P ./app/**/*.scss -o ./dist/scss ",
+    "test": "babel-node ./node_modules/.bin/isparta cover _mocha",
     "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
   }
 }
