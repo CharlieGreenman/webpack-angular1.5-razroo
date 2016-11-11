@@ -1,4 +1,4 @@
-# An NPM + Webpack + Angular 1.5 Build System
+# The world's most cutting edge NPM + Webpack + Angular 1.5 Build System
 
 ## To use run the following commands ##
 
