@@ -70,7 +70,7 @@
     "start": "npm run webpack-dev-server",
     "pug": "pug -Pw ./src/assets/**/*.pug -o ./dist",
     "sass": "node-sass -P ./app/**/*.scss -o ./dist/scss ",
-    "test": "mocha --compilers js:babel-core/register",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --compilers js:babel-core/register",
     "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
   }
 }
