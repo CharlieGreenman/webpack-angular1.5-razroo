@@ -35,6 +35,7 @@
     "mocha": "^3.1.2",
     "ng-redux": "^3.4.0-beta.1",
     "node-sass": "^3.4.2",
+    "nyc": "^9.0.1",
     "open": "0.0.5",
     "path": "^0.12.7",
     "protractor": "^4.0.4",
@@ -69,7 +70,8 @@
     "start": "npm run webpack-dev-server",
     "pug": "pug -Pw ./src/assets/**/*.pug -o ./dist",
     "sass": "node-sass -P ./app/**/*.scss -o ./dist/scss ",
-    "test": "istanbul cover ./node_modules/.bin/_mocha --report html --report text -x \"**.spec.js\"",
+    "test": "istanbul cover _mocha --report html --report text -x \"**.spec.js\"",
+    "nyctest": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
   }
 }
