@@ -46,6 +46,7 @@
     "redux-logger": "^2.6.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
+    "tap": "^8.0.1",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.14.0"
   },
@@ -63,7 +64,7 @@
   },
   "nyc": {
     "include": [
-      "src/*.js"
+      "**/*.spec.js"
     ],
     "require": [
       "babel-register"
@@ -83,6 +84,8 @@
     "sass": "node-sass -P ./app/**/*.scss -o ./dist/scss ",
     "test": "istanbul cover _mocha --report html --report text -x \"**.spec.js\"",
     "nyctest": "nyc --reporter=lcov --reporter=text-lcov npm test",
+    "ntest": "nyc tap **/**.spec.js",
+    "nrtest": "nyc report",
     "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
   }
 }
