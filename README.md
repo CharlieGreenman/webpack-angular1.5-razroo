@@ -74,5 +74,4 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
 
 | Priority  | Todo                                                                 |
 |-----------|----------------------------------------------------------------------|
-| 1         | Karma + Jasmine + Phantom                                            |
-| 2         | Protracter                                                           |
+| 1         | Protracter                                                           |
