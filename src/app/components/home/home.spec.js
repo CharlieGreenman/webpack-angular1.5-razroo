@@ -10,6 +10,10 @@ function add() {
   }, 0);
 }
 
+function returnString(test){
+  return `test {test}`;
+}
+
 describe('add()', function() {
   var tests = [
     {args: [1, 2],       expected: 3},
