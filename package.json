@@ -63,11 +63,11 @@
     "redux-thunk": "^2.1.0"
   },
   "nyc": {
-    "include": [
-      "**/*.spec.js"
-    ],
     "require": [
       "babel-register"
+    ],
+    "include": [
+      "src/app/components/**/*.spec.js"
     ],
     "sourceMap": false,
     "instrument": false
@@ -82,10 +82,9 @@
     "start": "npm run webpack-dev-server",
     "pug": "pug -Pw ./src/assets/**/*.pug -o ./dist",
     "sass": "node-sass -P ./app/**/*.scss -o ./dist/scss ",
-    "test": "istanbul cover _mocha --report html --report text -x \"**.spec.js\"",
+    "test": "_mocha -x \"**.spec.js\"",
     "nyctest": "nyc --reporter=lcov --reporter=text-lcov npm test",
-    "ntest": "nyc tap **/**.spec.js",
-    "nrtest": "nyc report",
+    "report": "nyc report --reporter=text-lcov",
     "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
   }
 }
