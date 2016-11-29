@@ -43,32 +43,31 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
 
  Some of the things that this build includes. Webpack
 
-* `npm Start`
-  * Jade
-    * pug-html-loader // Can write in pug and hook directly into angular template
-  * Javascript
-    * ES6
+* PUG
+  * pug-html-loader // Can write in pug and hook directly into angular template
 * Sass
   * watch hot reloading
   * Included in assets folder
-  * Uses css-modules
+  * css-modules included!!!
+  * Autoprefixer - Automatically adds prefixes to css when needed
+* Babel
+  * ES6 to ES5 conversion  
 * Webpack
-  * For this project included as a gulp stream
-  * will automatically concatenate js files
-  * uses babel with js and allows for importing and exporting modules as well
-* Babel-loader
-  * allow for es6 to es5 conversion
-* Eslint
-    * Babel support included
-    * angular support
-    * uses airbnb eslinter
-* Autoprefixer
-  * Automatically adds prefixes to css when needed
+  * Automatically concatenate js files
+  * Allows importing and exporting modules as well
 * NPM
   * Packages are managed through NPM
+* Eslint
+  * Babel support included
+  * angular support
+  * uses airbnb eslinter  
 * redux
   * Uses ng-redux
   * redux dev tools included with use of redux tools chrome plugin
+* testing
+  * Mocha and chai
+  * Istanbul
+    * Preserves ES6 in reports
 
 
 
