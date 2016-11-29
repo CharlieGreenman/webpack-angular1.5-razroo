@@ -1,4 +1,4 @@
-# The world's most cutting edge NPM + Webpack + Angular 1.5 Build System
+# The world's most cutting edge Angular 1.5 Build System
 
 ## To use run the following commands ##
 
@@ -55,6 +55,7 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
 * Webpack
   * Automatically concatenate js files
   * Allows importing and exporting modules as well
+  * Ease of configuration
 * NPM
   * Packages are managed through NPM
 * Eslint
