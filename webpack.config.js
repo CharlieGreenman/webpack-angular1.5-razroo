@@ -51,29 +51,29 @@ module.exports = {
           {
             enforce: 'pre',
             test: /\.js$/,
-            loader: 'eslint-loader',
+            use: 'eslint-loader',
             exclude: /(node_modules)/
           },
           {
             test: /\.pug/,
-            loader: "pug-html-loader"
+            use: "pug-html-loader"
           },
           {
             test: /\.html$/,
-            loader: "html-loader"
+            use: "html-loader"
           },
           {
             test: /\.scss$/,
-            loaders: ["style-loader", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]", "autoprefixer-loader", "sass-loader"]
+            use: ["style-loader", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]", "autoprefixer-loader", "sass-loader"]
           },
           {
             test: /\.css$/,
-            loaders: ["style-loader", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]"]
+            use: ["style-loader", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]"]
           },
           {
             test: /\.jsx?$/,
             exclude: /(node_modules)/,
-            loader: 'babel-loader',
+            use: 'babel-loader',
             query: {
               presets: ['es2015', 'react']
             }
