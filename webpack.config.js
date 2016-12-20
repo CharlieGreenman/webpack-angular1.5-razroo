@@ -60,20 +60,20 @@ module.exports = {
           },
           {
             test: /\.html$/,
-            loader: "html"
+            loader: "html-loader"
           },
           {
             test: /\.scss$/,
-            loaders: ["style", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]", "autoprefixer-loader", "sass"]
+            loaders: ["style-loader", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]", "autoprefixer-loader", "sass-loader"]
           },
           {
             test: /\.css$/,
-            loaders: ["style", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]"]
+            loaders: ["style-loader", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]"]
           },
           {
             test: /\.jsx?$/,
             exclude: /(node_modules)/,
-            loader: 'babel',
+            loader: 'babel-loader',
             query: {
               presets: ['es2015', 'react']
             }
