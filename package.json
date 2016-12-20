@@ -47,8 +47,11 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "tap": "^8.0.1",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.14.0"
+    "webpack": "2.1.0-beta.27",
+    "webpack-bundle-analyzer": "^2.1.1",
+    "webpack-dev-middleware": "~1.9.0",
+    "webpack-dev-server": "2.1.0-beta.11",
+    "webpack-merge": "~1.1.1"
   },
   "dependencies": {
     "angular": "^1.5.8",
@@ -83,6 +86,6 @@
     "pug": "pug -Pw ./src/assets/**/*.pug -o ./dist",
     "sass": "node-sass -P ./app/**/*.scss -o ./dist/scss ",
     "test": "istanbul cover _mocha",
-    "webpack-dev-server": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist"
+    "webpack-dev-server": "webpack-dev-server --devtool eval --progress --hot --inline --content-base dist"
   }
 }
