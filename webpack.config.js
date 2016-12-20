@@ -33,7 +33,7 @@ module.exports = {
               extensions: ['', '.js', '.jsx']
           },
           resolveLoader: {
-            modules: ['style-loader', 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'],
+            modules: ['style-loader', 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]', "autoprefixer-loader", "sass-loader"],
           }
         }
       }),
@@ -67,7 +67,7 @@ module.exports = {
           },
           {
             test: /\.scss$/,
-            use: ["style-loader", "autoprefixer-loader", "sass-loader"]
+            use: "style-loader"
           },
           {
             test: /\.css$/,
