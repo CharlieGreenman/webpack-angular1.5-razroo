@@ -20,7 +20,6 @@ module.exports = {
         publicPath: 'js',
         filename: 'bundle.js'
     },
-    debug: true,
     devtool: "#eval-source-map",
     plugins: [
       new webpack.LoaderOptionsPlugin({
@@ -28,6 +27,10 @@ module.exports = {
         options: {
           eslint: {
             configFile: path.join(__dirname, '.eslintrc')
+          },
+          debug: true,
+          resolve: {
+              extensions: ['', '.js', '.jsx']
           }
         }
       }),
@@ -57,9 +60,6 @@ module.exports = {
                     presets: ['es2015', 'react']
                 }
             }
-        ],
-        resolve: {
-            extensions: ['', '.js', '.jsx']
-        }
+        ]
     }
 };
