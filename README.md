@@ -69,6 +69,7 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
   * Mocha and chai
   * Istanbul
     * Preserves ES6 in reports
+* Yarn for super uber fast package management and stuff
 
 
 
