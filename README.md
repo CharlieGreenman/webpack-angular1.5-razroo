@@ -1,4 +1,4 @@
-# The world's most cutting edge Angular 1.5 Build System
+# The world's most cutting edge Webpack2 Angular 1.5 Build System
 
 ## To use run the following commands ##
 
@@ -52,7 +52,7 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
   * Autoprefixer - Automatically adds prefixes to css when needed
 * Babel
   * ES6 to ES5 conversion  
-* Webpack
+* Webpack 2
   * Automatically concatenate js files
   * Allows importing and exporting modules as well
   * Ease of configuration
