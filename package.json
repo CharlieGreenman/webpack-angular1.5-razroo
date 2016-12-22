@@ -39,7 +39,7 @@
     "nyc": "^9.0.1",
     "open": "0.0.5",
     "path": "^0.12.7",
-    "protractor": "^4.0.4",
+    "protractor": "^4.0.14",
     "pug": "^2.0.0-beta5",
     "pug-html-loader": "^1.0.8",
     "pug-loader": "^2.3.0",
