@@ -1,4 +1,4 @@
-# The world's most cutting edge Webpack2 Angular 1.5 Build System
+# Webpack2 Angular 2 Build System
 
 ## To use run the following commands ##
 
@@ -71,4 +71,4 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
     * Preserves ES6 in reports
   * e2e
     * Uses protractor  
-* Yarn for super uber fast package management and stuff                                            |
+* Yarn for super uber fast package management and stuff                                            
