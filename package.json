@@ -4,6 +4,7 @@
   "author": "Charlie Greenman",
   "private": true,
   "devDependencies": {
+    "@types/jasmine": "^2.5.43",
     "angular-mocks": "^1.5.8",
     "autoprefixer-loader": "^3.1.0",
     "babel-cli": "^6.18.0",
