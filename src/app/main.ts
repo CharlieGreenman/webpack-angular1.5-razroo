@@ -3,7 +3,7 @@ import uiRouter from 'angular-ui-router';
 import ngRedux  from 'ng-redux';
 
 import AppComponent from './app.component';
-import Components from './components/components.ts';
+import Components from './components/components';
 
 import{ RootReducer } from './reducers/index';
 

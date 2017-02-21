@@ -23,7 +23,7 @@ module.exports = {
     devtool: "#eval-source-map",
     plugins: [
       new webpack.LoaderOptionsPlugin({
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         options: {
           eslint: {
             configFile: path.join(__dirname, '.eslintrc')
