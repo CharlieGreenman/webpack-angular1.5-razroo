@@ -12,7 +12,7 @@ open("http://localhost:8081/");
 module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:8081',
-        path.resolve(__dirname, 'src/app/main.js')
+        path.resolve(__dirname, 'src/app/main.ts')
     ],
     output: {
         path: path.resolve(__dirname, './dist/js'),
@@ -53,8 +53,8 @@ module.exports = {
         rules: [
           {
             enforce: 'pre',
-            test: /\.js$/,
-            use: 'eslint-loader',
+            test: /\.ts$/,
+            use: ['eslint-loader', 'ts-loader'],
             exclude: /(node_modules)/
           },
           {
