@@ -23,14 +23,14 @@ module.exports = {
     devtool: "#eval-source-map",
     plugins: [
       new webpack.LoaderOptionsPlugin({
-        test: /\.js$/,
+        test: /\.ts$/,
         options: {
           eslint: {
             configFile: path.join(__dirname, '.eslintrc')
           },
           debug: true,
           resolve: {
-              extensions: ['', '.js', '.jsx']
+              extensions: ['', '.ts', '.tsx']
           },
           resolveLoader: {
             modules: ['node_modules', __dirname + '/client/node_modules'],
@@ -53,7 +53,7 @@ module.exports = {
         rules: [
           {
             enforce: 'pre',
-            test: /\.ts$/,
+            test: /\.tsx?$/,
             use: ['eslint-loader', 'ts-loader'],
             exclude: /(node_modules)/
           },
@@ -72,14 +72,6 @@ module.exports = {
           {
             test: /\.css$/,
             use: ["style-loader", "css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]"]
-          },
-          {
-            test: /\.jsx?$/,
-            exclude: /(node_modules)/,
-            use: 'babel-loader',
-            query: {
-              presets: ['es2015', 'react']
-            }
           }
         ]
     }
