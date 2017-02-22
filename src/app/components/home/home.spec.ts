@@ -3,6 +3,7 @@
 
 // import { expect } from 'chai';
 import { assert } from 'chai';
+import {} from 'jasmine';
 
 function add() {
   return Array.prototype.slice.call(arguments).reduce(function(prev, curr) {
