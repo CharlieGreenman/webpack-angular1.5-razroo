@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowJs": false,
     "baseUrl": "",
     "declaration": false,
     "emitDecoratorMetadata": true,

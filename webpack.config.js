@@ -2,8 +2,7 @@ var path = require("path");
 var open = require("open");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require("webpack");
-//for legac systems
-require('es6-promise').polyfill();
+
 
 //a little bit of glitch before page opens,
 //works well otherwise
@@ -18,6 +17,9 @@ module.exports = {
         path: path.resolve(__dirname, './dist/js'),
         publicPath: 'js',
         filename: 'bundle.js'
+    },
+    resolve: {
+      extensions: [".js", ".json", ".ts"]
     },
     performance: { hints: false },
     devtool: "#eval-source-map",
@@ -38,7 +40,7 @@ module.exports = {
         }
       }),
       new HtmlWebpackPlugin({
-        title: 'Webpack Starter Angular - kitconcept',
+        title: 'Webpack Starter Angular',
         template: 'dist/index.html',
         minify: {
           collapseWhitespace: true,
