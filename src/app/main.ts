@@ -20,7 +20,7 @@ angular.module("myApp", [
   "ngInject";
 
   /* eslint-disable */
-   $ngReduxProvider.createStoreWith(RootReducer, [], [window.devToolsExtension()]);
+   $ngReduxProvider.createStoreWith(RootReducer, [], [(<any>window).MyNamespace.devToolsExtension()]);
   /* eslint-enable */
 })
 
