@@ -2,6 +2,10 @@ import styles from '../../../assets/scss/home.scss';
 import * as ShowHide from '../../actions/showHide'
 
 class HomeController {
+  public name: string;
+  public styles: any;
+  public user: any;
+  public unsubscribe: any;
   constructor($ngRedux) {
     this.name = 'home';
     this.styles = styles;
