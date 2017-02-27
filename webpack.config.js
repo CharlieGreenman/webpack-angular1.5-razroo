@@ -54,14 +54,13 @@ module.exports = {
     module: {
         rules: [
           {
-            enforce: 'pre',
             test: /\.tsx?$/,
             use: ['eslint-loader', 'ts-loader'],
             exclude: /(node_modules)/
           },
           {
             test: /\.pug/,
-            use: "pug-html-loader"
+            use: 'pug-html-loader'
           },
           {
             test: /\.html$/,
