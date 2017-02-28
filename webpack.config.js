@@ -6,11 +6,11 @@ var webpack = require("webpack");
 
 //a little bit of glitch before page opens,
 //works well otherwise
-open("http://localhost:8081/");
+open("http://localhost:8080/");
 
 module.exports = {
     entry: [
-        'webpack-dev-server/client?http://localhost:8081',
+        'webpack-dev-server/client?http://localhost:8080',
         path.resolve(__dirname, 'src/app/main.ts')
     ],
     output: {
