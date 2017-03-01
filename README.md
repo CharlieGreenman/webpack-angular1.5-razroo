@@ -50,8 +50,6 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
   * Included in assets folder
   * css-modules included!!!
   * Autoprefixer - Automatically adds prefixes to css when needed
-* Babel
-  * ES6 to ES5 conversion  
 * Webpack 2
   * Automatically concatenate js files
   * Allows importing and exporting modules as well
@@ -71,4 +69,5 @@ As Angular 1.5 introduces components, this build tries to be as progressive as p
     * Preserves ES6 in reports
   * e2e
     * Uses protractor  
-* Yarn for super uber fast package management and stuff                                            |
+* Yarn for super uber fast package management and stuff   
+* Typescript
