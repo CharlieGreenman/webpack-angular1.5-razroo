@@ -2,35 +2,37 @@ var path = require("path");
 var open = require("open");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require("webpack");
-//for legac systems
-require('es6-promise').polyfill();
+
 
 //a little bit of glitch before page opens,
 //works well otherwise
-open("http://localhost:8081/");
+open("http://localhost:8080/");
 
 module.exports = {
     entry: [
-        'webpack-dev-server/client?http://localhost:8081',
-        path.resolve(__dirname, 'src/app/main.js')
+        'webpack-dev-server/client?http://localhost:8080',
+        path.resolve(__dirname, 'src/app/main.ts')
     ],
     output: {
         path: path.resolve(__dirname, './dist/js'),
         publicPath: 'js',
         filename: 'bundle.js'
     },
+    resolve: {
+      extensions: [".js", ".json", ".ts"]
+    },
     performance: { hints: false },
     devtool: "#eval-source-map",
     plugins: [
       new webpack.LoaderOptionsPlugin({
-        test: /\.js$/,
+        test: /\.tsx?$/,
         options: {
           eslint: {
             configFile: path.join(__dirname, '.eslintrc')
           },
           debug: true,
           resolve: {
-              extensions: ['', '.js', '.jsx']
+              extensions: ['', '.ts', '.tsx']
           },
           resolveLoader: {
             modules: ['node_modules', __dirname + '/client/node_modules'],
@@ -38,7 +40,7 @@ module.exports = {
         }
       }),
       new HtmlWebpackPlugin({
-        title: 'Webpack Starter Angular - kitconcept',
+        title: 'Webpack Starter Angular',
         template: 'dist/index.html',
         minify: {
           collapseWhitespace: true,
@@ -52,14 +54,13 @@ module.exports = {
     module: {
         rules: [
           {
-            enforce: 'pre',
-            test: /\.js$/,
-            use: 'eslint-loader',
+            test: /\.tsx?$/,
+            use: ['eslint-loader', 'ts-loader'],
             exclude: /(node_modules)/
           },
           {
             test: /\.pug/,
-            use: "pug-html-loader"
+            use: 'pug-html-loader'
           },
           {
             test: /\.html$/,
@@ -72,14 +73,6 @@ module.exports = {
           {
             test: /\.css$/,
             use: ["style-loader", "css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]"]
-          },
-          {
-            test: /\.jsx?$/,
-            exclude: /(node_modules)/,
-            use: 'babel-loader',
-            query: {
-              presets: ['es2015', 'react']
-            }
           }
         ]
     }

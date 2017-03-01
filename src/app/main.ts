@@ -2,7 +2,7 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngRedux  from 'ng-redux';
 
-import AppComponent from './app.component.js';
+import AppComponent from './app.component';
 import Components from './components/components';
 
 import{ RootReducer } from './reducers/index';
@@ -16,11 +16,11 @@ angular.module("myApp", [
     // Common.name,
     Components.name
 ])
-.config(( $ngReduxProvider) => {
+.config(( $ngReduxProvider ) => {
   "ngInject";
 
   /* eslint-disable */
-   $ngReduxProvider.createStoreWith(RootReducer, [], [window.devToolsExtension()]);
+   $ngReduxProvider.createStoreWith(RootReducer, [], [window['devToolsExtension']()]);
   /* eslint-enable */
 })
 
