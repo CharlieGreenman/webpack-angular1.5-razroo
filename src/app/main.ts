@@ -16,11 +16,11 @@ angular.module("myApp", [
     // Common.name,
     Components.name
 ])
-.config(( $ngReduxProvider) => {
+.config(( $ngReduxProvider ) => {
   "ngInject";
 
   /* eslint-disable */
-   $ngReduxProvider.createStoreWith(RootReducer, [], [(<any>window).MyNamespace.devToolsExtension()]);
+   $ngReduxProvider.createStoreWith(RootReducer, [], [window['devToolsExtension']()]);
   /* eslint-enable */
 })
 
